@@ -1,0 +1,11 @@
+
+6-12-2015
+
+Problemen met IDE omgevingen.
+ScalaTesten lukte niet in Eclipse.
+Overgestapt op IntelliJ.
+Echter geen succes vanwege Websphere problemen in IntelliJ.
+Applicatie wilde niet deployen.
+Toen terug naar Eclipse gestapt.
+De testen werken wel. Maar Eclipse is niet erg prettig werken.
+

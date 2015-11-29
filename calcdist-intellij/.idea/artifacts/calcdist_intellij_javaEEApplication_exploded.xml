@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="calcdist-intellij:javaEEApplication exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/calcdist_intellij_javaEEApplication_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="calcdist-intellij/javaeeApplication/javaEEApplication" />
+    </root>
+  </artifact>
+</component>

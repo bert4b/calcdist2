@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="calcdist-intellij:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/calcdist_intellij_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="calcdist-intellij/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="calcdist-intellij" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="SBT: unmanaged-jars" module-name="calcdist-intellij" />
+          <element id="library" level="module" name="SBT: com.google.code.gson:gson:2.5:jar" module-name="calcdist-intellij" />
+          <element id="library" level="module" name="SBT: org.scala-lang:scala-library:2.11.7:jar" module-name="calcdist-intellij" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

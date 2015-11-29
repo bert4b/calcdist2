@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" build-on-make="true" name="cb-server">
+    <output-path>$PROJECT_DIR$/out/artifacts/cb_server</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="calcdist-intellij-was" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="SBT: org.scala-lang:scala-library:2.11.7:jar" module-name="calcdist-intellij-was" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
