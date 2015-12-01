@@ -4,7 +4,7 @@
 		module="calcdist-intellij-was$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151205223440"
+		publication="20151211154528"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

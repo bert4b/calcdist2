@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/calcdist-intellij-was.iml" filepath="$PROJECT_DIR$/.idea/modules/calcdist-intellij-was.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/calcdist-intellij-was-build.iml" filepath="$PROJECT_DIR$/.idea/modules/calcdist-intellij-was-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cb-client/cb-client.iml" filepath="$PROJECT_DIR$/cb-client/cb-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cb-client-build.iml" filepath="$PROJECT_DIR$/.idea/modules/cb-client-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cb-server.iml" filepath="$PROJECT_DIR$/.idea/modules/cb-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cb-server-build.iml" filepath="$PROJECT_DIR$/.idea/modules/cb-server-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/parent.iml" filepath="$PROJECT_DIR$/.idea/modules/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/parent-build.iml" filepath="$PROJECT_DIR$/.idea/modules/parent-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cb-client/project/.idea/modules/project.iml" filepath="$PROJECT_DIR$/cb-client/project/.idea/modules/project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cb-client/project/.idea/modules/project-build.iml" filepath="$PROJECT_DIR$/cb-client/project/.idea/modules/project-build.iml" />
     </modules>
   </component>
 </project>
