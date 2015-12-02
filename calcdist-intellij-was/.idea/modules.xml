@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/cb-client/cb-client.iml" filepath="$PROJECT_DIR$/cb-client/cb-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cb-client.iml" filepath="$PROJECT_DIR$/.idea/modules/cb-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cb-client-build.iml" filepath="$PROJECT_DIR$/.idea/modules/cb-client-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cb-server.iml" filepath="$PROJECT_DIR$/.idea/modules/cb-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cb-server-build.iml" filepath="$PROJECT_DIR$/.idea/modules/cb-server-build.iml" />

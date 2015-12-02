@@ -7,8 +7,12 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/cb-client/project/project" />
-            <option value="$PROJECT_DIR$/cb-client/project/project/project" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/cb-client" />
+            <option value="$PROJECT_DIR$/cb-client/project" />
+            <option value="$PROJECT_DIR$/cb-server" />
+            <option value="$PROJECT_DIR$/cb-server/project" />
+            <option value="$PROJECT_DIR$/project" />
           </set>
         </option>
         <option name="resolveClassifiers" value="true" />
@@ -18,8 +22,12 @@
         <option name="useOurOwnAutoImport" value="true" />
         <option name="myModules">
           <set>
-            <option value="$PROJECT_DIR$/cb-client/project/project" />
-            <option value="$PROJECT_DIR$/cb-client/project/project/project" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/cb-client" />
+            <option value="$PROJECT_DIR$/cb-client/project" />
+            <option value="$PROJECT_DIR$/cb-server" />
+            <option value="$PROJECT_DIR$/cb-server/project" />
+            <option value="$PROJECT_DIR$/project" />
           </set>
         </option>
       </SbtProjectSettings>

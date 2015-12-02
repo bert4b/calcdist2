@@ -10,6 +10,7 @@
           <element id="library" level="module" name="SBT: org.scala-lang:scala-library:2.11.7:jar" module-name="cb-server" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="cb-server/web/Web" />
     </root>
   </artifact>
 </component>

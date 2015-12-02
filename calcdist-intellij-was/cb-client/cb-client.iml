@@ -9,13 +9,16 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-        </sourceRoots>
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/../out/production/cb-client" />
+    <output-test url="file://$MODULE_DIR$/../out/production/cb-client-test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/web">
+      <sourceFolder url="file://$MODULE_DIR$/web" type="java-resource" />
+    </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
