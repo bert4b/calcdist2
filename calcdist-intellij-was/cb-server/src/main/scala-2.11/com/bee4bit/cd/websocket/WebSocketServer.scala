@@ -8,17 +8,25 @@ import javax.websocket.OnMessage
 import javax.websocket.OnOpen
 import javax.websocket.Session
 
+import com.bee4bit.cb.datastoremanager.DSManager
+import com.google.gson.Gson
+
 @ServerEndpoint("/socket.io")
 class WebSocketServer {
+
+  val dsManager :DSManager =DSManager
 
   @OnOpen
   def open(session: Session) {
     session.addMessageHandler(FooImpl)
     println(session);
+
   }
 
   @OnClose
-  def close(session: Session) {
+  def close(session: Session): Unit = {
+    dsManager.deleteNode(session)
+    println(session)
   }
 
   @OnError
@@ -28,10 +36,30 @@ class WebSocketServer {
 
   @OnMessage
   def handleMessage(message: String, session: Session) {
-    println(session.getId())
-    println(message)
+    val  gson = new Gson()
+    val request:NodeRequest=gson.fromJson(message,classOf[NodeRequest])
+    val node=dsManager.getNode(String.valueOf(request.id))
+
+   if (node.isDefined){
+     node.get.setSession(session.getId)
+     var companion=dsManager.getCompanionNode(node.get).get
+     val nodeResponse:NodeResponse=new NodeResponse()
+     nodeResponse.companionWith=request.id.toString
+     if (companion.id!=request.id.toString){
+       //We have a companion
+
+
+       nodeResponse.nodeSignal=companion.getNodeSignalInformation.getSignal()
+      session.getBasicRemote.sendText(gson.toJson(nodeResponse,classOf[NodeResponse]))
+     }else{
+       session.getBasicRemote.sendText(gson.toJson(nodeResponse,classOf[NodeResponse]))
+     }
+
+   }
 
   }
+
+
 
 
 }

@@ -1,5 +1,7 @@
 package com.bee4bit.cb.datastoremanager
 
+import javax.websocket.Session
+
 import com.bee4bit.cb.node.{NodeCluster, Node}
 import scala.collection.mutable.HashMap
 import scala.collection.mutable.Map
@@ -7,7 +9,7 @@ import scala.collection.mutable.HashSet
 import scala.collection.mutable.ListBuffer
 class DSManager {
 
-  var clusterSize: Int = 2;
+  var clusterSize: Int = 2
   var nodes: Map[String, Node] = new HashMap()
   var clusters: ListBuffer[NodeCluster] = new ListBuffer()
   var nodeClusters: Map[NodeCluster, Node] = new HashMap()
@@ -47,6 +49,17 @@ class DSManager {
 
       nodesInCluster
 
+  }
+
+  def deleteNode(session:Session): Unit ={
+    val nodeKeyVal:Option[(String, Node)]=nodes.find(_._2.websocketSession==session.getId)
+    if (nodeKeyVal.isDefined){
+      nodes -= nodeKeyVal.get._1
+    }
+    val nodeCKeyVal:Option[(NodeCluster,Node)]=nodeClusters.find(_._2.websocketSession==session.getId)
+    if (nodeCKeyVal.isDefined){
+      nodeClusters.remove(nodeCKeyVal.get._1)
+    }
   }
 
 }

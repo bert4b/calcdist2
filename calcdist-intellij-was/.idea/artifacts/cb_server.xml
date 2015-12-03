@@ -8,6 +8,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="module" name="SBT: org.scala-lang:scala-library:2.11.7:jar" module-name="cb-server" />
+          <element id="library" level="module" name="SBT: com.google.code.gson:gson:2.5:jar" module-name="cb-server" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="cb-server/web/Web" />

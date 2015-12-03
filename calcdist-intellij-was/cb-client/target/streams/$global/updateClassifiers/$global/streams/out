@@ -6,7 +6,7 @@
 [debug] == resolving dependencies for cb-client#cb-client$sources_javadoc_2.11;1.0 [compile]
 [debug] == resolving dependencies cb-client#cb-client$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6f7e4d7f
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5d076125
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7
 [debug] 	found org.scala-lang#scala-library;2.11.7 in sbt-chain
 [debug] 	[2.11.7] org.scala-lang#scala-library;2.11.7
@@ -167,7 +167,7 @@
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(doc)
-[debug] :: resolution report :: resolve 147ms :: artifacts dl 31ms
+[debug] :: resolution report :: resolve 134ms :: artifacts dl 19ms
 [debug] 	report for cb-client#cb-client$sources_javadoc_2.11;1.0 compile produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-client\target\resolution-cache\reports\cb-client-cb-client$sources_javadoc_2.11-compile.xml
 [debug] 	report for cb-client#cb-client$sources_javadoc_2.11;1.0 runtime produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-client\target\resolution-cache\reports\cb-client-cb-client$sources_javadoc_2.11-runtime.xml
 [debug] 	report for cb-client#cb-client$sources_javadoc_2.11;1.0 test produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-client\target\resolution-cache\reports\cb-client-cb-client$sources_javadoc_2.11-test.xml
@@ -181,4 +181,4 @@
 [debug] 	report for cb-client#cb-client$sources_javadoc_2.11;1.0 docs produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-client\target\resolution-cache\reports\cb-client-cb-client$sources_javadoc_2.11-docs.xml
 [debug] 	report for cb-client#cb-client$sources_javadoc_2.11;1.0 pom produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-client\target\resolution-cache\reports\cb-client-cb-client$sources_javadoc_2.11-pom.xml
 [debug] 	report for cb-client#cb-client$sources_javadoc_2.11;1.0 scala-tool produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-client\target\resolution-cache\reports\cb-client-cb-client$sources_javadoc_2.11-scala-tool.xml
-[debug] 	resolve done (147ms resolve - 31ms download)
+[debug] 	resolve done (134ms resolve - 19ms download)

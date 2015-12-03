@@ -768,9 +768,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 726ms :: artifacts dl 158ms
+[debug] :: resolution report :: resolve 697ms :: artifacts dl 43ms
 [debug] 	report for parent#parent$sbt_2.11;1.0 default produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\target\resolution-cache\reports\parent-parent$sbt_2.11-default.xml
-[debug] 	resolve done (726ms resolve - 158ms download)
+[debug] 	resolve done (697ms resolve - 43ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: parent#parent$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1152,6 +1152,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
 [debug] 	[NOT REQUIRED] org.scalaz#scalaz-core_2.10;7.0.2!scalaz-core_2.10.jar(src)
 [debug] 	[NOT REQUIRED] org.scalaz#scalaz-effect_2.10;7.0.2!scalaz-effect_2.10.jar(src)
-[debug] :: resolution report :: resolve 219ms :: artifacts dl 61ms
+[debug] :: resolution report :: resolve 219ms :: artifacts dl 39ms
 [debug] 	report for parent#parent$sources_2.11;1.0 default produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\target\resolution-cache\reports\parent-parent$sources_2.11-default.xml
-[debug] 	resolve done (219ms resolve - 61ms download)
+[debug] 	resolve done (219ms resolve - 39ms download)

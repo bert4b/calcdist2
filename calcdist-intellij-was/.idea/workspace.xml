@@ -2,32 +2,130 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc1f8bf-223d-4cda-8069-df77578283f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/web/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cb-client/web/angularjs/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cb-server/META-INF/application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/NodeRequest.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/NodeResponse.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/datastoremanager/DSManager$$anonfun$1.class" afterPath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/datastoremanager/DSManager$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/datastoremanager/DSManager$$anonfun$2.class" afterPath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/datastoremanager/DSManager$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/datastoremanager/DSManager$.class" afterPath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/datastoremanager/DSManager$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/datastoremanager/DSManager.class" afterPath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/datastoremanager/DSManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/node/Node.class" afterPath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cb/node/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cd/websocket/FooImpl$.class" afterPath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cd/websocket/FooImpl$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cd/websocket/WebSocketServer.class" afterPath="$PROJECT_DIR$/cb-server/target/scala-2.11/classes/com/bee4bit/cd/websocket/WebSocketServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" afterPath="$PROJECT_DIR$/cb-server/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/cb-server/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterPath="$PROJECT_DIR$/cb-server/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterPath="$PROJECT_DIR$/cb-server/target/streams/$global/update/$global/streams/update_cache_2.11/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DSManager$$anonfun$1.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DSManager$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DSManager$$anonfun$2.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DSManager$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DSManager$.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DSManager$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DSManager.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DSManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DataMetaInformation.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/datastoremanager/DataMetaInformation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/node/Node.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cb/node/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cd/service/Connect.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cd/service/Connect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cd/service/Information.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cd/service/Information.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cd/websocket/FooImpl$.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cd/websocket/FooImpl$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cd/websocket/WebSocketServer.class" afterPath="$PROJECT_DIR$/out/artifacts/cb_server/WEB-INF/classes/com/bee4bit/cd/websocket/WebSocketServer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/copy-resources" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../calculationdistribution" afterPath="$PROJECT_DIR$/../calculationdistribution" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/cb_server.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/cb_server.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/cb-client-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/cb-client-build.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/cb-client.iml" afterPath="$PROJECT_DIR$/.idea/modules/cb-client.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/cb-server.iml" afterPath="$PROJECT_DIR$/.idea/modules/cb-server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/parent.iml" afterPath="$PROJECT_DIR$/.idea/modules/parent.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sbt.xml" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/cb-client.iml" afterPath="$PROJECT_DIR$/cb-client/cb-client.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sbt_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sbt_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sbt_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sources_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sources_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sources_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sources_javadoc_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sources_javadoc_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sources_javadoc_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/cb-client/cb-client$sources_javadoc_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sbt_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_2.11-default.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-compile.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-docs.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-optional.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-plugin.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-pom.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-provided.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-runtime.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-sources.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-test.xml" afterPath="$PROJECT_DIR$/cb-client/target/resolution-cache/reports/cb-client-cb-client$sources_javadoc_2.11-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/cb-client/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/cb-client/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/web/index.html" afterPath="$PROJECT_DIR$/cb-client/web/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-client/web/node.js" afterPath="$PROJECT_DIR$/cb-client/web/node.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/build.sbt" afterPath="$PROJECT_DIR$/cb-server/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala" afterPath="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/Node.scala" afterPath="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/Node.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/WebSocketServer.scala" afterPath="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/WebSocketServer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sbt_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sbt_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sbt_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sources_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sources_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sources_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sources_javadoc_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sources_javadoc_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sources_javadoc_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server$sources_javadoc_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/cb-server/cb-server_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sbt_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_2.11-default.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-compile.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-docs.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-optional.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-plugin.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-pom.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-provided.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-runtime.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-sources.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-test.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server$sources_javadoc_2.11-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-compile.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-docs.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-optional.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-plugin.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-pom.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-provided.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-runtime.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-sources.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-test.xml" afterPath="$PROJECT_DIR$/cb-server/target/resolution-cache/reports/cb-server-cb-server_2.11-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/cb-server/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/cb-server/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/cb-server/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/cb-server/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/cb-server/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/cb-server/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/cb-server/target/streams/runtime/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/cb-server/target/streams/test/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cb-server/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/cb-server/target/streams/test/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cb_client_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/cb_client_war_exploded/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sbt_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sbt_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sbt_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sources_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sources_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sources_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sources_javadoc_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sources_javadoc_2.11/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sources_javadoc_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/parent/parent$sources_javadoc_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sbt_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/parent-parent$sources_javadoc_2.11-test.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/cb_client_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/cb_client.xml" />
     </list>
     <ignored path="calcdist-intellij-was.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,7 +179,16 @@
   <component name="ExternalProjectsManager">
     <system id="SBT">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -94,22 +201,62 @@
         <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/service/Connect.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebSocketServer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/WebSocketServer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
-                <element signature="e#33#99#0" expanded="true" />
+                <element signature="e#35#79#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebSocketServer.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/WebSocketServer.scala">
+      <file leaf-file-name="NodeResponse.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/NodeResponse.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9189189">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NodeRequest.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/NodeRequest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DSManager.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2675522">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding>
-                <element signature="e#35#79#0" expanded="true" />
+                <element signature="e#41#71#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="node.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cb-client/web/node.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.222222">
+              <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,37 +265,27 @@
         <entry file="file://$PROJECT_DIR$/cb-server/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DSManager.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cb-client/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+            <state vertical-scroll-proportion="-4.3962264">
+              <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DSManagerTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cb-server/src/test/scala-2.11/com/bee4bit/cb/datastoremanager/DSManagerTest.scala">
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cb-client/web/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodeManager.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/NodeManager.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -158,37 +295,7 @@
         <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/Node.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="node.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cb-client/web/node.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.62963">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cb-server/src/test/scala-2.11/com/bee4bit/cd/service/ConnectTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodeApp.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/app/NodeApp.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -220,19 +327,21 @@
         <option value="$PROJECT_DIR$/src/test/scala-2.11/com/bee4bit/cd/service/ConnectTest.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/project/Build.scala" />
-        <option value="$PROJECT_DIR$/cb-client/web/index.html" />
         <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/NodeManager.scala" />
         <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/service/Information.scala" />
         <option value="$PROJECT_DIR$/cb-client/web/node_modules/restful.js/dist/restful.standalone.js" />
         <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DataMetaInformation.scala" />
         <option value="$PROJECT_DIR$/cb-server/src/test/scala-2.11/com/bee4bit/cb/datastoremanager/DSManagerTest.scala" />
-        <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/Node.scala" />
-        <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala" />
         <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/service/Connect.scala" />
         <option value="$PROJECT_DIR$/cb-server/src/test/scala-2.11/com/bee4bit/cd/service/ConnectTest.scala" />
+        <option value="$PROJECT_DIR$/cb-client/web/index.html" />
         <option value="$PROJECT_DIR$/cb-server/build.sbt" />
-        <option value="$PROJECT_DIR$/cb-client/web/node.js" />
+        <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/NodeRequest.scala" />
+        <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/Node.scala" />
+        <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/NodeResponse.scala" />
         <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/WebSocketServer.scala" />
+        <option value="$PROJECT_DIR$/cb-client/web/node.js" />
+        <option value="$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala" />
       </list>
     </option>
   </component>
@@ -286,8 +395,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,6 +427,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cb-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calcdist-intellij-was" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calcdist-intellij-was" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cb-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calcdist-intellij-was" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calcdist-intellij-was" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cb-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-2.11" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,6 +564,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="websocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calcdist-intellij-was" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calcdist-intellij-was" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cb-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-2.11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bee4bit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -449,6 +637,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,81 +714,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calcdist-intellij-was" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calcdist-intellij-was" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cb-client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calcdist-intellij-was" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calcdist-intellij-was" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cb-client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calcdist-intellij-was" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calcdist-intellij-was" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cb-client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calcdist-intellij-was" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calcdist-intellij-was" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cb-client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1288,7 +1407,7 @@
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="cb-client">
           <settings>
@@ -1394,7 +1513,7 @@
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1449871891061" />
+    <option name="lastUpdateTimestamp" value="1449950150264" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -1473,31 +1592,11 @@
             </list>
           </value>
         </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="project" />
-              <option name="path" value="$PROJECT_DIR$/cb-server/project/project" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="project" />
-                <option name="path" value="$PROJECT_DIR$/cb-server/project/project" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
-                <option name="name" value="project-build" />
-                <option name="path" value="$PROJECT_DIR$/cb-server/project/project/project" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
       </map>
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2899719315257" />
+        <entry key="$PROJECT_DIR$" value="2899797602523" />
       </map>
     </option>
     <option name="externalProjectsViewState">
@@ -1517,7 +1616,8 @@
       <workItem from="1449348188993" duration="5310000" />
       <workItem from="1449835901786" duration="2792000" />
       <workItem from="1449842155792" duration="1075000" />
-      <workItem from="1449843803495" duration="18089000" />
+      <workItem from="1449843803495" duration="18344000" />
+      <workItem from="1449947153167" duration="9839000" />
     </task>
     <servers />
   </component>
@@ -1530,43 +1630,43 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27266000" />
+    <option name="totallyTimeSpent" value="37360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.33422175" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33766234" sideWeight="0.3283582" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39935064" sideWeight="0.510661" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.6577825" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25586355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33766234" sideWeight="0.3491471" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.6657783" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25586355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39935064" sideWeight="0.48933902" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1581,7 +1681,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/WebSocketServer.scala</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="21" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1589,11 +1705,20 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/service/Connect.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#33#99#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-sbt/main/srcs/main-0.13.8-sources.jar!/sbt/Defaults.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5625">
           <caret line="965" column="62" selection-start-line="965" selection-start-column="43" selection-end-line="965" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1601,15 +1726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cb-client/web/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1627,7 +1743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1653,7 +1768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1669,15 +1783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cb-client/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0566038">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1701,7 +1806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1725,7 +1829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1733,7 +1836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1741,7 +1843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05821918">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1749,23 +1850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/app/NodeApp.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/NodeManager.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1773,22 +1857,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="e#42#96#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/Node.scala">
+    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/NodeManager.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1801,38 +1879,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/service/Connect.scala">
+    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/app/NodeApp.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-          <folding>
-            <element signature="e#33#99#0" expanded="true" />
-          </folding>
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/javax.websocket/javax.websocket-api/srcs/javax.websocket-api-1.1-sources.jar!/javax/websocket/server/ServerEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33277026">
+          <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.google.code.gson/gson/srcs/gson-2.5-sources.jar!/com/google/gson/Gson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33206832">
+          <caret line="177" column="9" selection-start-line="177" selection-start-column="9" selection-end-line="177" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cb-server/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cb-client/web/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/javax.websocket/javax.websocket-api/srcs/javax.websocket-api-1.1-sources.jar!/javax/websocket/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="258" column="16" selection-start-line="258" selection-start-column="11" selection-end-line="258" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/node/Node.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cb-client/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3962264">
+          <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/NodeRequest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/NodeResponse.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cb-client/web/node.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.62963">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+        <state vertical-scroll-proportion="-13.222222">
+          <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/service/Connect.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cd/websocket/WebSocketServer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9189189">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#35#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2675522">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="e#41#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1843,7 +2001,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>cb-client</last-edited>
+          <last-edited>cb-server</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1856,7 +2014,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web (cb-client)|Web</last-edited>
+          <last-edited>javaEEApplication (cb-server)|JavaEE Application</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1892,7 +2050,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Web|cb-client</last-edited>
+          <last-edited>cb-server</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,6 +1,7 @@
 package com.bee4bit.cb.node
 
 
+
 class Node(metaInfo:NodeMetaInformation)  {
 
     var id: String = ""
@@ -8,6 +9,7 @@ class Node(metaInfo:NodeMetaInformation)  {
   var nodeSignalInfo=new NodeSignalInformation()
   var internalId:Long=0
   var nodeConnection: Node=null
+  var websocketSession:String=""
   def this(identifier:String,nodeInfo:NodeMetaInformation)={
     this(nodeInfo)
     this.id=identifier
@@ -27,6 +29,10 @@ class Node(metaInfo:NodeMetaInformation)  {
     if (nod.id!=this.id){
       this.nodeConnection=nod
     }
+  }
+
+  def setSession(session: String): Unit ={
+    this.websocketSession=session
   }
 }
 

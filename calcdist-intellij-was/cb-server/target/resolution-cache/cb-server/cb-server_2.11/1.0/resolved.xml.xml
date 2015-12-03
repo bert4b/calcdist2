@@ -4,7 +4,7 @@
 		module="cb-server_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151211231103"
+		publication="20151212205536"
 	>
 		<description>
 		cb-server
@@ -37,5 +37,6 @@
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.4" conf="test->default(compile)"/>
 		<dependency org="javax.ws.rs" name="javax.ws.rs-api" rev="2.0.1" conf="provided->default(compile)"/>
 		<dependency org="javax.websocket" name="javax.websocket-api" rev="1.1" conf="provided->default(compile)"/>
+		<dependency org="com.google.code.gson" name="gson" rev="2.5" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

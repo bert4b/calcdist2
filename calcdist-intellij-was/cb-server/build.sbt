@@ -10,3 +10,6 @@ libraryDependencies += "javax.ws.rs" % "javax.ws.rs-api" % "2.0.1" % "provided"
 
 libraryDependencies += "javax.websocket" % "javax.websocket-api" % "1.1" % "provided"
 
+libraryDependencies += "com.google.code.gson" % "gson" % "2.5"
+
+
