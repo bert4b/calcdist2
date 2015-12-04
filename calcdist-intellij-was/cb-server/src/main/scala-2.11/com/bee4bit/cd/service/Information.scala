@@ -13,8 +13,8 @@ class Information {
   @GET
   @Produces(Array("application/json","application/xml"))
 	def info() : String={
-		System.out.println("test2");
-		return "test"
+		System.out.println("test2")
+		"test"
 	}
 
 

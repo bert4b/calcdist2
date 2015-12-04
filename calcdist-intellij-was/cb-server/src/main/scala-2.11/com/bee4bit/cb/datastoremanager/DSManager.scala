@@ -3,33 +3,33 @@ package com.bee4bit.cb.datastoremanager
 import javax.websocket.Session
 
 import com.bee4bit.cb.node.{NodeCluster, Node}
-import scala.collection.mutable.HashMap
-import scala.collection.mutable.Map
-import scala.collection.mutable.HashSet
+import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 class DSManager {
 
   var clusterSize: Int = 2
-  var nodes: Map[String, Node] = new HashMap()
+  var nodes: mutable.Map[String, Node] = new mutable.HashMap()
   var clusters: ListBuffer[NodeCluster] = new ListBuffer()
-  var nodeClusters: Map[NodeCluster, Node] = new HashMap()
+  val nodeClusters= new mutable.HashMap[NodeCluster, collection.mutable.Set[Node]]() with mutable.MultiMap[NodeCluster, Node]
 
   def addNode(node: Node) = {
 
     var cluster: NodeCluster = null;
-    if ((nodes.size) % clusterSize == 0) {
-      cluster = new NodeCluster(clusterSize, (clusters.size) * (clusterSize))
+    if (nodes.size % clusterSize == 0) {
+      cluster = new NodeCluster(clusterSize, clusters.size * clusterSize)
       clusters += cluster
     }
 
 
     //Logic to determine where the node should in some cluster
-    var clusterSpace:Long=node.internalId/clusterSize
-    var cls = clusters.find((p:NodeCluster)=>p.start>=(((clusterSpace))*clusterSize) && p.end<=(((clusterSpace+1)*clusterSize)-1))
+    val clusterSpace:Long=node.internalId/clusterSize
+    val cls = clusters.find((p:NodeCluster)=>p.start>=(((clusterSpace))*clusterSize) && p.end<=(((clusterSpace+1)*clusterSize)-1))
     if (cls.isDefined){
       val theNodeCluster = cls.get
-      nodeClusters.put(theNodeCluster,node)
-      nodes.put(node.id, node);
+
+
+      nodeClusters.addBinding(theNodeCluster,node)
+      nodes.put(node.id, node)
     }
 
   }
@@ -44,11 +44,17 @@ class DSManager {
   }
 
   def getCompanionNode(node:Node):Option[Node]={
-    val cluster=nodeClusters.find(_._2==node).get._1
-    val nodesInCluster:Option[Node]=nodeClusters.get(cluster)
+    var nodeComp:Option[Node]=None
+    if (nodeClusters.exists(_._2 == node)) {
+      val cluster = nodeClusters.find(_._2 == node).get._1
 
-      nodesInCluster
+    val nodesInCluster:Option[collection.mutable.Set[Node]]=nodeClusters.get(cluster)
 
+    if (nodesInCluster.isDefined) {
+      nodeComp=nodesInCluster.get.find(_.id != node.id)
+    }
+    }
+    nodeComp
   }
 
   def deleteNode(session:Session): Unit ={
@@ -56,7 +62,7 @@ class DSManager {
     if (nodeKeyVal.isDefined){
       nodes -= nodeKeyVal.get._1
     }
-    val nodeCKeyVal:Option[(NodeCluster,Node)]=nodeClusters.find(_._2.websocketSession==session.getId)
+    val nodeCKeyVal:Option[(NodeCluster,collection.mutable.Set[Node])]=nodeClusters.find(_._2.exists(_.id == session.getId))
     if (nodeCKeyVal.isDefined){
       nodeClusters.remove(nodeCKeyVal.get._1)
     }

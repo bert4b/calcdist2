@@ -42,7 +42,7 @@ class WebSocketServer {
 
    if (node.isDefined){
      node.get.setSession(session.getId)
-     var companion=dsManager.getCompanionNode(node.get).get
+     val companion=dsManager.getCompanionNode(node.get).get
      val nodeResponse:NodeResponse=new NodeResponse()
      nodeResponse.companionWith=request.id.toString
      if (companion.id!=request.id.toString){

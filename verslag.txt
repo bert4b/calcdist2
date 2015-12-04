@@ -1,5 +1,11 @@
 
-6-12-2015
+10-11-2015
+Websphere server configuratie in Eclipse.
+Bezig met testen dmv ScalaTest.
+Problemen met maven die ook scala moet compileren en scala moet testen.
+Eclipse heeft nog problemen in combinatie met maven.
+
+3-12-2015
 
 Problemen met IDE omgevingen.
 ScalaTesten lukte niet in Eclipse.
@@ -9,3 +15,13 @@ Applicatie wilde niet deployen.
 Toen terug naar Eclipse gestapt.
 De testen werken wel. Maar Eclipse is niet erg prettig werken.
 
+
+4-12-2015
+
+SBT gebruik
+Scala 2.11 gebruik
+Met IntelliJ werkt het nu goed.
+Nu websockets gebruiken om signals uit te wisselen.
+Als een client geen websockets ondersteund dan moet long polling toegepast worden.
+Verder nog problemen in Firefox mbt restfull api.
+Javascript foreach gaat fout.
