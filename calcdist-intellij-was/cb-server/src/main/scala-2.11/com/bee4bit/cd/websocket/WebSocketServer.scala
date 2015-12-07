@@ -42,19 +42,21 @@ class WebSocketServer {
 
    if (node.isDefined){
      node.get.setSession(session.getId)
-     val companion=dsManager.getCompanionNode(node.get).get
-     val nodeResponse:NodeResponse=new NodeResponse()
-     nodeResponse.companionWith=request.id.toString
-     if (companion.id!=request.id.toString){
-       //We have a companion
+
+     if (dsManager.getCompanionNode(node.get).isDefined) {
+       val companion=dsManager.getCompanionNode(node.get).get
+       val nodeResponse: NodeResponse = new NodeResponse()
+       nodeResponse.companionWith = request.id.toString
+       if (companion.id != request.id.toString) {
+         //We have a companion
 
 
-       nodeResponse.nodeSignal=companion.getNodeSignalInformation.getSignal()
-      session.getBasicRemote.sendText(gson.toJson(nodeResponse,classOf[NodeResponse]))
-     }else{
-       session.getBasicRemote.sendText(gson.toJson(nodeResponse,classOf[NodeResponse]))
+         nodeResponse.nodeSignal = companion.getNodeSignalInformation.getSignal()
+         session.getBasicRemote.sendText(gson.toJson(nodeResponse, classOf[NodeResponse]))
+       } else {
+         session.getBasicRemote.sendText(gson.toJson(nodeResponse, classOf[NodeResponse]))
+       }
      }
-
    }
 
   }
