@@ -39,26 +39,22 @@ class WebSocketServer {
     val  gson = new Gson()
     val request:NodeRequest=gson.fromJson(message,classOf[NodeRequest])
     val node=dsManager.getNode(String.valueOf(request.id))
-
+    val nodeResponse: NodeResponse = new NodeResponse()
    if (node.isDefined){
      node.get.setSession(session.getId)
 
      if (dsManager.getCompanionNode(node.get).isDefined) {
        val companion=dsManager.getCompanionNode(node.get).get
-       val nodeResponse: NodeResponse = new NodeResponse()
+
        nodeResponse.companionWith = request.id.toString
        if (companion.id != request.id.toString) {
          //We have a companion
-
-
          nodeResponse.nodeSignal = companion.getNodeSignalInformation.getSignal()
-         session.getBasicRemote.sendText(gson.toJson(nodeResponse, classOf[NodeResponse]))
-       } else {
-         session.getBasicRemote.sendText(gson.toJson(nodeResponse, classOf[NodeResponse]))
+
        }
      }
    }
-
+    session.getBasicRemote.sendText(gson.toJson(nodeResponse, classOf[NodeResponse]))
   }
 
 
