@@ -46,13 +46,13 @@ class DSManager {
   def getCompanionNode(node:Node):Option[Node]={
     var nodeComp:Option[Node]=None
     if (nodeClusters.exists(_._2 == node)) {
-      val cluster = nodeClusters.find(_._2 == node).get._1
+      val cluster = nodeClusters.find(_._2 contains node).get._1
 
-    val nodesInCluster:Option[collection.mutable.Set[Node]]=nodeClusters.get(cluster)
+      val nodesInCluster:Option[collection.mutable.Set[Node]]=nodeClusters.get(cluster)
 
-    if (nodesInCluster.isDefined) {
-      nodeComp=nodesInCluster.get.find(_.id != node.id)
-    }
+      if (nodesInCluster.isDefined) {
+        nodeComp=nodesInCluster.get.find(_.id != node.id)
+      }
     }
     nodeComp
   }
