@@ -88,8 +88,8 @@
       <file leaf-file-name="DSManager.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49335864">
-              <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.7514231">
+              <caret line="65" column="111" selection-start-line="65" selection-start-column="111" selection-end-line="65" selection-end-column="111" />
               <folding>
                 <element signature="e#41#71#0" expanded="true" />
               </folding>
@@ -1604,7 +1604,7 @@
       <workItem from="1449842155792" duration="1075000" />
       <workItem from="1449843803495" duration="18344000" />
       <workItem from="1449947153167" duration="10266000" />
-      <workItem from="1450036685994" duration="5444000" />
+      <workItem from="1450036685994" duration="6477000" />
     </task>
     <servers />
   </component>
@@ -1617,7 +1617,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43231000" />
+    <option name="totallyTimeSpent" value="44264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1688,8 +1688,14 @@
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1723,6 +1729,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="258" column="16" selection-start-line="258" selection-start-column="11" selection-end-line="258" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1768,8 +1775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cb-server/src/main/scala-2.11/com/bee4bit/cb/datastoremanager/DSManager.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49335864">
-          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.7514231">
+          <caret line="65" column="111" selection-start-line="65" selection-start-column="111" selection-end-line="65" selection-end-column="111" />
           <folding>
             <element signature="e#41#71#0" expanded="true" />
           </folding>

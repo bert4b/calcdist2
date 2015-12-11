@@ -45,7 +45,7 @@ class DSManager {
 
   def getCompanionNode(node:Node):Option[Node]={
     var nodeComp:Option[Node]=None
-    if (nodeClusters.exists(_._2 == node)) {
+    if (nodeClusters.exists(_._2 contains node)) {
       val cluster = nodeClusters.find(_._2 contains node).get._1
 
       val nodesInCluster:Option[collection.mutable.Set[Node]]=nodeClusters.get(cluster)
@@ -60,11 +60,13 @@ class DSManager {
   def deleteNode(session:Session): Unit ={
     val nodeKeyVal:Option[(String, Node)]=nodes.find(_._2.websocketSession==session.getId)
     if (nodeKeyVal.isDefined){
+      val id:String=nodeKeyVal.get._2.id
       nodes -= nodeKeyVal.get._1
-    }
-    val nodeCKeyVal:Option[(NodeCluster,collection.mutable.Set[Node])]=nodeClusters.find(_._2.exists(_.id == session.getId))
+
+    val nodeCKeyVal:Option[(NodeCluster,collection.mutable.Set[Node])]=nodeClusters.find(_._2.exists(_.id == id))
     if (nodeCKeyVal.isDefined){
       nodeClusters.remove(nodeCKeyVal.get._1)
+    }
     }
   }
 
