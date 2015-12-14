@@ -88,7 +88,7 @@ function sendSignalToServer(signalData,restful){
                     writeToConsoleScreen(message.data);
                     var nodeResponse=JSON.parse(message.data);
                     if (nodeResponse.nodeSignal!="" && nodeResponse.companionWith!=generateGuid()){
-                        writeToConsoleScreen("yes");
+                        p2p.signal(nodeResponse.nodeSignal);
                     }else{
                         writeToConsoleScreen("no");
                     }

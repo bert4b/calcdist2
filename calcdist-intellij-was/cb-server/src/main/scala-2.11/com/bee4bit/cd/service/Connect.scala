@@ -16,10 +16,14 @@ class Connect {
   @Path("login/{id}")
   @GET
   @Produces(Array("application/json"))
-  def nodeSubscribe(@PathParam("id") identifier: String): DataMetaInformation = {
-    dsManager.addNode(new Node(identifier, new NodeMetaInformation()))
-    dsManager.getMetaInformation
+  def nodeSubscribe(@PathParam("id") identifier: String): NodeMetaInformationResponse = {
+    val nodeInf=dsManager.addNode(new Node(identifier, new NodeMetaInformation()))
 
+    val nodeInfo=new NodeMetaInformationResponse()
+    nodeInfo.dbVersion=dsManager.getMetaInformation.getDbVersion
+    nodeInfo.isInitiator=nodeInf.nodeConnection!=null
+    nodeInfo.nodeConnection=nodeInf.nodeConnection
+    nodeInfo
   }
 
   @Path("dsinfo")

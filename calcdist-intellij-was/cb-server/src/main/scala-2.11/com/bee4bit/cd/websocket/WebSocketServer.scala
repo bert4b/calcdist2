@@ -50,7 +50,7 @@ class WebSocketServer {
        if (companion.id != request.id.toString) {
          //We have a companion
          nodeResponse.nodeSignal = companion.getNodeSignalInformation.getSignal()
-
+         nodeResponse.companionWith = companion.id.toString
        }
      }
    }
