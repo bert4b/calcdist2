@@ -8,11 +8,18 @@ import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 class DSManager {
 
+
+
   var clusterSize: Int = 2
   var nodes: mutable.Map[String, Node] = new mutable.HashMap()
   var clusters: ListBuffer[NodeCluster] = new ListBuffer()
   val nodeClusters= new mutable.HashMap[NodeCluster, collection.mutable.Set[Node]]() with mutable.MultiMap[NodeCluster, Node]
+  def deleteAll() = {
+   nodes.clear()
+   clusters.clear()
+    nodeClusters.clear()
 
+  }
   def addNode(node: Node) :NodeInClusterInformation = {
     val nodeInfo:NodeInClusterInformation=new NodeInClusterInformation()
     var cluster: NodeCluster = null
@@ -33,27 +40,23 @@ class DSManager {
 
       if (nodeClusters.get(theNodeCluster).isDefined){
         def f(a:Node,b:Node):Node={
-          var n:Node=b
-          if (a!=null && b!=null){
-            if (a.nodeConnection==null){
-              n=a
-            }
-            if (b.nodeConnection==null){
-              n=b
-            }
-          }else{
-            if (a!=null){
-              n=a
-            }
-            if (b!=node){
-              n=b
-            }
-          }
+          var n:Node=null
 
-          n
+            if (node!=a){
+              n=a
+            }else if (node!=b){
+              n=b
+            }
+            n
         }
-        node.nodeConnection=nodeClusters.get(theNodeCluster).get.reduce(f)
-        nodeInfo.nodeConnection =node.nodeConnection.id
+        var theConnectedNode=nodeClusters.get(theNodeCluster).get.reduce(f)
+        node.nodeConnection=theConnectedNode
+          if (theConnectedNode != null && theConnectedNode!=node){
+            nodeInfo.nodeConnection =  node.nodeConnection.id
+            theConnectedNode.nodeConnection=node
+          }else{
+            nodeInfo.nodeConnection = ""
+          }
       }
 
       nodes.put(node.id, node)
@@ -85,10 +88,11 @@ class DSManager {
     nodeComp
   }
 
-  def deleteNode(session:Session): Unit ={
+  def deleteNode(session:Session): String ={
+    var id: String = null
     val nodeKeyVal:Option[(String, Node)]=nodes.find(_._2.websocketSession==session.getId)
     if (nodeKeyVal.isDefined){
-      val id:String=nodeKeyVal.get._2.id
+      id=nodeKeyVal.get._2.id
       nodes -= nodeKeyVal.get._1
 
       val nodeCKeyVal:Option[(NodeCluster,collection.mutable.Set[Node])]=nodeClusters.find(_._2.exists(_.id == id))
@@ -99,6 +103,7 @@ class DSManager {
       }
 
     }
+    id
   }
 
 }

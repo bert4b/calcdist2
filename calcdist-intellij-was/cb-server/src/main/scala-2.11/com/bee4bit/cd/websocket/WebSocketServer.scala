@@ -25,8 +25,8 @@ class WebSocketServer {
 
   @OnClose
   def close(session: Session): Unit = {
-    dsManager.deleteNode(session)
-    println(session)
+    val id=dsManager.deleteNode(session)
+    println("Deleted:"+id)
   }
 
   @OnError

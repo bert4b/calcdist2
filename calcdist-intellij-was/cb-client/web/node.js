@@ -6,6 +6,9 @@ start();
 ()
 var p2p={};
 var guid=0;
+var initiator=true;
+var alreadySent=false;
+var ws = new WebSocket("ws://localhost:9080/cb-server/socket.io");
 var configWebRTC={
 		  initiator: location.hash === '#1',
 		  channelConfig: {},
@@ -50,9 +53,6 @@ function sendSignalToServer(signalData,restful){
 
 
 
-
-
-
 	var signalEntity=resource.one('signalmsg',generateGuid()).get().then(function(response) {
 
 		const dataEntity = response.body();
@@ -62,14 +62,14 @@ function sendSignalToServer(signalData,restful){
 
 
 			if (response.statusCode()==200){
-				writeToConsoleScreen(response.body().data());
+				writeToConsoleScreen("Signal sent: response ok");
 
-                var ws = new WebSocket("ws://localhost:9080/cb-server/socket.io");
+
 
 
 
                 ws.onopen = function() {
-                    writeToConsoleScreen('open');
+                    writeToConsoleScreen('WS open');
                     var node = {"id":generateGuid(),"request":"companions"};
                     ws.send(JSON.stringify(node));
                 };
@@ -77,7 +77,7 @@ function sendSignalToServer(signalData,restful){
 
                 ws.onclose = function() {
                     //do something when connection close
-                    writeToConsoleScreen("ws closed");
+                    writeToConsoleScreen("WS closed");
                 };
 
 
@@ -90,7 +90,7 @@ function sendSignalToServer(signalData,restful){
                     if (nodeResponse.nodeSignal!="" && nodeResponse.companionWith!=generateGuid()){
                         p2p.signal(nodeResponse.nodeSignal);
                     }else{
-                        writeToConsoleScreen("no");
+                        writeToConsoleScreen("no companion found");
                     }
 
                 };
@@ -103,19 +103,77 @@ function sendSignalToServer(signalData,restful){
 
 }
 
+function receiveSignalFromServer(restful){
+    var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
+    var signalEntity=resource.one('receivesignalmsg',generateGuid()).get().then(function(response) {
+
+
+
+            writeToConsoleScreen(response.statusCode());
+            const data = response.body().data();
+            writeToConsoleScreen(data);
+            if (response.statusCode()==200){
+                writeToConsoleScreen("Received signal");
+                writeToConsoleScreen(response.body().data());
+                p2p.signal(data.signal);
+            }
+
+    });
+}
+function sendAnswerBackToInitiator(restful,answerdata){
+
+
+
+
+    var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
+    var signalEntity=resource.one('answersignalmsg',generateGuid()).get().then(function(response) {
+        const dataEntity = response.body();
+        const data = dataEntity.data();
+
+        data.answer = answerdata;
+        dataEntity.save().then(function (response) {
+
+
+            if (response.statusCode() == 200) {
+
+                writeToConsoleScreen("Answer signal");
+            }
+        });
+    });
+}
 function setupP2P(simplepeer,data,restful){
-	writeToConsoleScreen('p2p');
-	writeToConsoleScreen(data.initiator);
-
-	var p = new simplepeer({ initiator: data.initiator, trickle: false,stream:false});
+	writeToConsoleScreen(data);
+    var datObject=data;
+    initiator=datObject.initiator;
+	var p = new simplepeer({ initiator: datObject.initiator, trickle: false,stream:false});
 	p2p=p;
-	p.on('error', function (err) { console.log('error', err) })
+	p.on('error', function (err) { writeToConsoleScreen('Error: '+ err) });
+    if (datObject.initiator!=true) {
 
+        //receive signal from server
+        writeToConsoleScreen("I'm slave: Receive signal from server");
+        receiveSignalFromServer(restful);
+    }
 	p.on('signal', function (data) {
-		writeToConsoleScreen(JSON.stringify(data));
-	  document.querySelector("#offer").value = JSON.stringify(data);
-	  sendSignalToServer(JSON.stringify(data),restful);
-	})
+        document.querySelector("#offer").value = JSON.stringify(data);
+        if (initiator==true) {
+            if (alreadySent==false){
+                //send signal to server
+                writeToConsoleScreen("I'm initiator: Send signal to server");
+                sendSignalToServer(JSON.stringify(data), restful);
+            }else{
+                //Send not once again signal to server
+                alreadySent=true;
+            }
+        }
+        else{
+            writeToConsoleScreen("I get answer from initiator.");
+           writeToConsoleScreen(data);
+
+          sendAnswerBackToInitiator(restful,JSON.stringify(data));
+
+        }
+	});
 
 
 
@@ -123,9 +181,10 @@ function setupP2P(simplepeer,data,restful){
 		writeToConsoleScreen('CONNECT');
 		writeToConsoleScreen(p);
 		p.send('test');
-	})
+	});
 
 	p.on('data', function (data) {
+        writeToConsoleScreen(data);
 		document.querySelector("#received").innerHTML=document.querySelector("#received").innerHTML+data;
 
 	})
@@ -139,18 +198,18 @@ function start(){
         //socketio.on('clientcount', function (data) {
         //    writeToConsoleScreen(data);
         //});
-		var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
-		resource.custom('dsinfo').get().then(function(response){
-			writeToConsoleScreen(response);
-			  const article = response.body().data();
-				writeToConsoleScreen(article);
-		});
+        var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
+        //resource.custom('dsinfo').get().then(function(response){
+			//writeToConsoleScreen(response);
+			//  const article = response.body().data();
+			//	writeToConsoleScreen(article);
+        //});
 
 		resource.one('login',generateGuid()).get().then(function(response) {
 
-			writeToConsoleScreen(response.statusCode());
+			writeToConsoleScreen("ClientID: "+generateGuid());
 			const data = response.body().data();
-			writeToConsoleScreen(data);
+			writeToConsoleScreen("Login");
 			if (response.statusCode()==200){
 				setupP2P(simplepeer,data,restful);
 			}
@@ -218,7 +277,7 @@ function socketiop2p(){
             writeToConsoleScreen('ready');
             p2p.usePeerConnection = true;
             p2p.emit('peer-obj', { peerId: peerId });
-        })
+        });
         p2p.on('go-private', function () {
             p2p.upgrade(); // upgrade to peerConnection
         });
@@ -228,7 +287,7 @@ function socketiop2p(){
             socket.on('peer-msg', function(data) {
                 console.log('Message from peer: %s', data);
                 socket.broadcast.emit('peer-msg', data);
-            })
+            });
 
             socket.on('go-private', function(data) {
                 socket.broadcast.emit('go-private', data);
