@@ -65,6 +65,32 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library" scope="PROVIDED">
+      <library name="SBT: javax.ejb:javax.ejb-api:3.2:jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.ivy2/cache/javax.ejb/javax.ejb-api/jars/javax.ejb-api-3.2.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.ivy2/cache/javax.ejb/javax.ejb-api/docs/javax.ejb-api-3.2-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ivy2/cache/javax.ejb/javax.ejb-api/srcs/javax.ejb-api-3.2-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="PROVIDED">
+      <library name="SBT: javax.transaction:javax.transaction-api:1.2:jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.ivy2/cache/javax.transaction/javax.transaction-api/jars/javax.transaction-api-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.ivy2/cache/javax.transaction/javax.transaction-api/docs/javax.transaction-api-1.2-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ivy2/cache/javax.transaction/javax.transaction-api/srcs/javax.transaction-api-1.2-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="PROVIDED">
       <library name="SBT: javax.websocket:javax.websocket-api:1.1:jar">
         <CLASSES>
           <root url="jar://$USER_HOME$/.ivy2/cache/javax.websocket/javax.websocket-api/bundles/javax.websocket-api-1.1.jar!/" />

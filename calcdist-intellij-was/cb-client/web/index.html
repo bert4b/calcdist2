@@ -37,21 +37,30 @@
 v1
 <br/>
 <br/>
+Calculation:<br/>
+<input type="text" id="job"><br/>
+<input type="button" onclick="fireJob();" value="Fire calculation"/>
 
+Send message:<br/>
+<input type="text" id="send"></input><input type="button" onclick="send();" value="Send"/>
+<br/>
+
+<br/>
+Status:
+<br/>
+<div id="connection" style="color:lawngreen">
+
+</div><br/>
+Received data:<br/>
+<div id="received"></div>
+<div id="display">
+
+</div>
 
 Signal:<br/>
 <textarea id="offer" style="width:900px;height:200px"></textarea><br/><input type="button" onclick="offer();" value="Signal"/><br/>
 <br/><br/>
 
-<input type="button" onclick="send();" value="socketiop2p"/>
-<br/>
-
-Answer:<br/>
-<input type="text" id="send"></input><input type="button" onclick="send();" value="Send"/>
-<div id="received"></div>
-<div id="display">
-
-</div>
 </body>
 </html>
 

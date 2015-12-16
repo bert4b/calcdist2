@@ -4,7 +4,7 @@
 		module="cb-server$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151212205546"
+		publication="20151219220442"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -51,6 +51,14 @@
 		<dependency org="javax.websocket" name="javax.websocket-api" rev="1.1" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="javax.websocket-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="javax.websocket-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="javax.ejb" name="javax.ejb-api" rev="3.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="javax.ejb-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="javax.ejb-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="javax.transaction" name="javax.transaction-api" rev="1.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="javax.transaction-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="javax.transaction-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.7" transitive="false" conf="scala-tool->default(compile)">
 			<artifact name="scala-compiler" type="src" ext="jar" conf="sources" e:classifier="sources"/>

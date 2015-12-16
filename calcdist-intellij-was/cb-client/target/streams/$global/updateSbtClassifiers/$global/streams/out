@@ -768,9 +768,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 1775ms :: artifacts dl 149ms
+[debug] :: resolution report :: resolve 1872ms :: artifacts dl 82ms
 [debug] 	report for cb-client#cb-client$sbt_2.11;1.0 default produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-client\target\resolution-cache\reports\cb-client-cb-client$sbt_2.11-default.xml
-[debug] 	resolve done (1775ms resolve - 149ms download)
+[debug] 	resolve done (1872ms resolve - 82ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: cb-client#cb-client$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1152,6 +1152,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
 [debug] 	[NOT REQUIRED] org.scalaz#scalaz-core_2.10;7.0.2!scalaz-core_2.10.jar(src)
 [debug] 	[NOT REQUIRED] org.scalaz#scalaz-effect_2.10;7.0.2!scalaz-effect_2.10.jar(src)
-[debug] :: resolution report :: resolve 671ms :: artifacts dl 87ms
+[debug] :: resolution report :: resolve 670ms :: artifacts dl 66ms
 [debug] 	report for cb-client#cb-client$sources_2.11;1.0 default produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-client\target\resolution-cache\reports\cb-client-cb-client$sources_2.11-default.xml
-[debug] 	resolve done (671ms resolve - 87ms download)
+[debug] 	resolve done (670ms resolve - 66ms download)

@@ -1,12 +1,13 @@
 package com.bee4bit.cd.service
 
 
+import javax.ejb.Asynchronous
 import javax.ws.rs.{Consumes, GET, PUT, Path, PathParam, Produces}
 
 import com.bee4bit.cb.datastoremanager.{DSManager, DataMetaInformation}
 import com.bee4bit.cb.node._
-import com.bee4bit.cd.websocket.NodeRequest
 import com.google.gson.Gson
+
 
 @Path("connect")
 class Connect {
@@ -82,15 +83,16 @@ class Connect {
 
     }
 
-
     nodeSignal
 
   }
 
   @Path("answersignalmsg/{id}")
   @PUT
-  @Consumes(Array("application/octet-stream"))
-   def nodeAnswerSignal(@PathParam("id") id: String, signal: NodeSignalInformation): String = {
+  @Consumes(Array("application/json","application/octet-stream"))
+   def nodeAnswerSignal(@PathParam("id") id: String, sig: String): String = {
+    val gson=new Gson()
+    val signal=gson.fromJson(sig,classOf[NodeSignalInformation])
     System.out.println("Answer id:" + id)
 
     val node = dsManager.getNode(id)
@@ -104,5 +106,33 @@ class Connect {
 
     "{\"signal\": \"ok\"}"
 
+  }
+
+  @Asynchronous
+  @Path("waitforanswer/{id}")
+  @GET
+  @Consumes(Array("application/json","application/octet-stream"))
+  @Produces(Array("application/json"))
+  def waitForAnswer(@PathParam("id") id: String):NodeSignalInformation={
+
+    val node = dsManager.getNode(id)
+
+
+    if (node.isDefined) {
+
+      var run:Boolean=true
+      while(run){
+        if (node.get.nodeConnection!=null){
+          println(node.get.nodeConnection.nodeSignalInfo.getAnswer())
+          if (node.get.nodeConnection.nodeSignalInfo.getAnswer()!="" ){
+            run=false
+          }
+
+        }
+        Thread.sleep(100)
+      }
+    }
+
+    node.get.nodeConnection.nodeSignalInfo
   }
 }

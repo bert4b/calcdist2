@@ -7,8 +7,32 @@
 		revision="1.0"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20151212205536"/>
+		date="20151219220431"/>
 	<dependencies>
+		<module organisation="javax.ejb" name="javax.ejb-api">
+			<revision name="3.2" status="release" pubdate="20130429191111" resolver="public" artresolver="public" homepage="http://ejb-spec.java.net" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
+				<metadata-artifact status="successful" details="" size="14477" time="160" location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\ivy-3.2.xml" searched="true" original-local-location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\ivy-3.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2.pom"/>
+				<caller organisation="cb-server" name="cb-server_2.11" conf="provided" rev="3.2" rev-constraint-default="3.2" rev-constraint-dynamic="3.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="javax.ejb-api" type="jar" ext="jar" status="successful" details="" size="63961" time="204" location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\jars\javax.ejb-api-3.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.transaction" name="javax.transaction-api">
+			<revision name="1.2" status="release" pubdate="20130513150148" resolver="public" artresolver="public" homepage="http://jta-spec.java.net" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
+				<metadata-artifact status="successful" details="" size="13796" time="175" location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\ivy-1.2.xml" searched="true" original-local-location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\ivy-1.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.pom"/>
+				<caller organisation="javax.ejb" name="javax.ejb-api" conf="default, compile, runtime, master" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="3.2"/>
+				<artifacts>
+					<artifact name="javax.transaction-api" type="jar" ext="jar" status="successful" details="" size="30724" time="196" location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\jars\javax.transaction-api-1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="javax.websocket" name="javax.websocket-api">
 			<revision name="1.1" status="release" pubdate="20140806200236" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://websocket-spec.java.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<metadata-artifact status="no" details="" size="4012" time="0" location="C:\Users\bert\.ivy2\cache\javax.websocket\javax.websocket-api\ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/websocket/javax.websocket-api/1.1/javax.websocket-api-1.1.pom"/>

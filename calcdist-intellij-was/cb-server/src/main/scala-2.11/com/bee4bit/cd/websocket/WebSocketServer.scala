@@ -19,7 +19,7 @@ class WebSocketServer {
   @OnOpen
   def open(session: Session) {
     session.addMessageHandler(FooImpl)
-    println(session);
+    println(session)
 
   }
 
@@ -31,7 +31,8 @@ class WebSocketServer {
 
   @OnError
   def onError(error: Throwable) {
-    println(error);
+    println(error)
+
   }
 
   @OnMessage

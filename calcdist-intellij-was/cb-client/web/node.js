@@ -3,12 +3,14 @@
 start();
 
 })
-()
+();
 var p2p={};
 var guid=0;
 var initiator=true;
 var alreadySent=false;
 var ws = new WebSocket("ws://localhost:9080/cb-server/socket.io");
+var receivedSignalObject=null;
+var connectionEstablishedIndicator=false;
 var configWebRTC={
 		  initiator: location.hash === '#1',
 		  channelConfig: {},
@@ -21,18 +23,17 @@ var configWebRTC={
 		  trickle: true
 		};
 function fetchBackend(fetch){
-	writeToConsoleScreen(fetch);
+	//writeToConsoleScreen(fetch);
 }
 
 function offer(){
 	 p2p.signal(JSON.parse(document.querySelector('#offer').value))
-
 }
 function send(){
-
 	 p2p.send(document.querySelector('#send').value);
-
 }
+
+
 
 function getMilSeconds(){
 	  var d = new Date();
@@ -45,111 +46,102 @@ function generateGuid(){
         //Should hapen only once.
 		guid= getMilSeconds();
 	}
-    writeToConsoleScreen(guid);
 	return guid;
+}
+function waitForAnswerFromSlave(restful){
+    var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
+    var signalEntity=resource.one('waitforanswer',generateGuid()).get().then(function(response) {
+        writeToConsoleScreen("Initiator get answer, respond.");
+        p2p.signal(JSON.parse(response.body().data().answer));
+    });
 }
 function sendSignalToServer(signalData,restful){
 	var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
-
-
-
 	var signalEntity=resource.one('signalmsg',generateGuid()).get().then(function(response) {
-
 		const dataEntity = response.body();
 		const data=dataEntity.data();
+        writeToConsoleScreen(data);
 		data.signal=signalData;
 		dataEntity.save().then(function(response){
-
-
 			if (response.statusCode()==200){
 				writeToConsoleScreen("Signal sent: response ok");
 
+                //Wait while client gets signal and answers.
+                waitForAnswerFromSlave(restful);
 
 
-
-
-                ws.onopen = function() {
-                    writeToConsoleScreen('WS open');
-                    var node = {"id":generateGuid(),"request":"companions"};
-                    ws.send(JSON.stringify(node));
-                };
-
-
-                ws.onclose = function() {
-                    //do something when connection close
-                    writeToConsoleScreen("WS closed");
-                };
-
-
-
-
-                ws.onmessage = function(message) {
-                    writeToConsoleScreen(message);
-                    writeToConsoleScreen(message.data);
-                    var nodeResponse=JSON.parse(message.data);
-                    if (nodeResponse.nodeSignal!="" && nodeResponse.companionWith!=generateGuid()){
-                        p2p.signal(nodeResponse.nodeSignal);
-                    }else{
-                        writeToConsoleScreen("no companion found");
-                    }
-
-                };
+                //ws.onopen = function() {
+                //    writeToConsoleScreen('WS open');
+                //    var node = {"id":generateGuid(),"request":"companions"};
+                //    ws.send(JSON.stringify(node));
+                //};
+                //ws.onclose = function() {
+                //    //do something when connection close
+                //    writeToConsoleScreen("WS closed");
+                //};
+                //ws.onmessage = function(message) {
+                //    writeToConsoleScreen(message);
+                //    writeToConsoleScreen(message.data);
+                //    var nodeResponse=JSON.parse(message.data);
+                //    if (nodeResponse.nodeSignal!="" && nodeResponse.companionWith!=generateGuid()){
+                //        p2p.signal(nodeResponse.nodeSignal);
+                //    }else{
+                //        writeToConsoleScreen("no companion found");
+                //    }
+                //};
 			}
 		});
-
-
-
 	});
 
 }
 
 function receiveSignalFromServer(restful){
     var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
-    var signalEntity=resource.one('receivesignalmsg',generateGuid()).get().then(function(response) {
-
-
-
-            writeToConsoleScreen(response.statusCode());
+    resource.one('receivesignalmsg',generateGuid()).get().then(function(response) {
             const data = response.body().data();
             writeToConsoleScreen(data);
             if (response.statusCode()==200){
                 writeToConsoleScreen("Received signal");
-                writeToConsoleScreen(response.body().data());
+                receivedSignalObject=response.body().data();
                 p2p.signal(data.signal);
             }
 
     });
 }
-function sendAnswerBackToInitiator(restful,answerdata){
-
-
-
-
+function sendAnswerBackToInitiator(restful,answerdata,dataObject){
     var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
-    var signalEntity=resource.one('answersignalmsg',generateGuid()).get().then(function(response) {
-        const dataEntity = response.body();
-        const data = dataEntity.data();
 
-        data.answer = answerdata;
-        dataEntity.save().then(function (response) {
+    //var signalEntity=resource.one('answersignalmsg',generateGuid()).get().then(function(response) {
 
 
-            if (response.statusCode() == 200) {
+        //const dataEntity = response.body();
+        //const data=dataEntity.data();
+        //writeToConsoleScreen(data);
+        //data.answer=answerdata;
+        //dataEntity.save().then(function(response){
+        //    if (response.statusCode()==200){
+        //        writeToConsoleScreen("Answer signal");
+        //    }
+        //});
+    //});
+    var signalEntity=resource.one('answersignalmsg',generateGuid());
 
-                writeToConsoleScreen("Answer signal");
-            }
-        });
+    dataObject.answer=answerdata
+    signalEntity.put(dataObject).then(function(response) {
+        writeToConsoleScreen(response);
+        if (response.statusCode()==200) {
+
+                 writeToConsoleScreen("Answered signal");
+        }
     });
 }
 function setupP2P(simplepeer,data,restful){
-	writeToConsoleScreen(data);
     var datObject=data;
     initiator=datObject.initiator;
 	var p = new simplepeer({ initiator: datObject.initiator, trickle: false,stream:false});
 	p2p=p;
 	p.on('error', function (err) { writeToConsoleScreen('Error: '+ err) });
     if (datObject.initiator!=true) {
-
         //receive signal from server
         writeToConsoleScreen("I'm slave: Receive signal from server");
         receiveSignalFromServer(restful);
@@ -167,27 +159,48 @@ function setupP2P(simplepeer,data,restful){
             }
         }
         else{
-            writeToConsoleScreen("I get answer from initiator.");
-           writeToConsoleScreen(data);
-
-          sendAnswerBackToInitiator(restful,JSON.stringify(data));
-
+          writeToConsoleScreen("I get answer from initiator.");
+          sendAnswerBackToInitiator(restful,JSON.stringify(data),receivedSignalObject);
         }
 	});
-
-
-
 	p.on('connect', function () {
-		writeToConsoleScreen('CONNECT');
-		writeToConsoleScreen(p);
-		p.send('test');
+		writeToConsoleScreen("Connection established!");
+        connectionEstablished();
 	});
 
 	p.on('data', function (data) {
         writeToConsoleScreen(data);
 		document.querySelector("#received").innerHTML=document.querySelector("#received").innerHTML+data;
+        var jobTask=data;
+        if (jobTask.nodeid!=generateGuid()){
+            writeToConsoleScreen("Executing");
+            //Execute job
+            var result=eval(jobTask.jobExecutable);
+            //Send result back
+            if (result!=null || result!=undefined){
+                sendResponseAfterExecutingJob(jobTask,result);
+            }
+        }
 
 	})
+}
+
+function sendResponseAfterExecutingJob(job,result){
+
+    var resultResponse = {"nodeid":generateGuid(),"jobid":+ job.jobid, "result":result};
+    writeToConsoleScreen("Send result back");
+    p2p.send(JSON.stringify(resultResponse));
+}
+
+function fireJob(){
+    var id=1;
+    var job=document.querySelector('#job').value;
+    var jobTask = {"nodeid":generateGuid(),"jobid":+ id, "jobExecutable":job};
+    p2p.send(JSON.stringify(jobTask));
+}
+function connectionEstablished(){
+    document.querySelector("#connection").innerHTML="Connection Established";
+    connectionEstablishedIndicator=true;
 }
 
 function start(){
@@ -204,18 +217,18 @@ function start(){
 			//  const article = response.body().data();
 			//	writeToConsoleScreen(article);
         //});
+    if (!connectionEstablishedIndicator) {
+        resource.one('login', generateGuid()).get().then(function (response) {
 
-		resource.one('login',generateGuid()).get().then(function(response) {
+            writeToConsoleScreen("ClientID: " + generateGuid());
+            const data = response.body().data();
+            writeToConsoleScreen("Login");
+            if (response.statusCode() == 200) {
+                setupP2P(simplepeer, data, restful);
+            }
 
-			writeToConsoleScreen("ClientID: "+generateGuid());
-			const data = response.body().data();
-			writeToConsoleScreen("Login");
-			if (response.statusCode()==200){
-				setupP2P(simplepeer,data,restful);
-			}
-
-		});
-
+        });
+    }
 
 		/*
 		var ws = new WebSocket("ws://localhost:9080/cb-server/socket.io");

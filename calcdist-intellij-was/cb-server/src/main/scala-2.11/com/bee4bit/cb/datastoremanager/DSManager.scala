@@ -3,12 +3,14 @@ package com.bee4bit.cb.datastoremanager
 import javax.websocket.Session
 
 import com.bee4bit.cb.node.{Node, NodeCluster}
+import com.bee4bit.cb.notification.EventAdd
+import com.bee4bit.cb.server.DSManagerNotification
 
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 class DSManager {
 
-
+var notifier=DSManagerNotification
 
   var clusterSize: Int = 2
   var nodes: mutable.Map[String, Node] = new mutable.HashMap()
@@ -26,6 +28,7 @@ class DSManager {
     if (nodes.size % clusterSize == 0) {
       cluster = new NodeCluster(clusterSize, clusters.size * clusterSize)
       clusters += cluster
+      notifier.event("cluster",EventAdd,cluster)
     }
 
 
@@ -50,10 +53,13 @@ class DSManager {
             n
         }
         var theConnectedNode=nodeClusters.get(theNodeCluster).get.reduce(f)
-        node.nodeConnection=theConnectedNode
+
           if (theConnectedNode != null && theConnectedNode!=node){
-            nodeInfo.nodeConnection =  node.nodeConnection.id
+
+            node.nodeConnection=theConnectedNode
             theConnectedNode.nodeConnection=node
+
+            nodeInfo.nodeConnection =  node.nodeConnection.id
           }else{
             nodeInfo.nodeConnection = ""
           }

@@ -12,4 +12,5 @@ libraryDependencies += "javax.websocket" % "javax.websocket-api" % "1.1" % "prov
 
 libraryDependencies += "com.google.code.gson" % "gson" % "2.5"
 
+libraryDependencies += "javax.ejb" % "javax.ejb-api" % "3.2"  % "provided"
 

@@ -32,7 +32,7 @@
     ws.onmessage = function(message) {
         console.info(message);
         console.info(message.data);
-
+        document.querySelector("#received").innerHTML=document.querySelector("#received").innerHTML+message.data;
 
     };
 

@@ -9,7 +9,7 @@
 [debug] == resolving dependencies for cb-server#cb-server$sources_javadoc_2.11;1.0 [compile]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@a1fadca
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2f000f62
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7
 [debug] 	found org.scala-lang#scala-library;2.11.7 in sbt-chain
 [debug] 	[2.11.7] org.scala-lang#scala-library;2.11.7
@@ -18,7 +18,7 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->master]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->com.google.code.gson#gson;2.5 [compile->default(compile)]
 [info] Resolving com.google.code.gson#gson;2.5 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3a63134d
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1a45b7ce
 [debug] sbt-chain: module revision found in cache: com.google.code.gson#gson;2.5
 [debug] 	found com.google.code.gson#gson;2.5 in sbt-chain
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->com.google.code.gson#gson;2.5 [compile->runtime]
@@ -73,7 +73,7 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->com.google.code.gson#gson;2.5 [test->master]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scalatest#scalatest_2.11;2.2.4 [test->default(compile)]
 [info] Resolving org.scalatest#scalatest_2.11;2.2.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2e0c6afd
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@12b22481
 [debug] sbt-chain: module revision found in cache: org.scalatest#scalatest_2.11;2.2.4
 [debug] 	found org.scalatest#scalatest_2.11;2.2.4 in sbt-chain
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scalatest#scalatest_2.11;2.2.4 [test->runtime]
@@ -81,7 +81,7 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scalatest#scalatest_2.11;2.2.4 [test->master]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-reflect;2.11.2 [test->default(compile)]
 [info] Resolving org.scala-lang#scala-reflect;2.11.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@27baf572
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2b47652b
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.2
 [debug] 	found org.scala-lang#scala-reflect;2.11.2 in sbt-chain
 [debug] 	[2.11.2] org.scala-lang#scala-reflect;2.11.2
@@ -90,7 +90,7 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-reflect;2.11.2 [test->master]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.2 [test->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@463669a0
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@ba26ea2
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.2
 [debug] 	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in sbt-chain
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.2 [test->runtime]
@@ -100,7 +100,7 @@
 [debug] == resolving dependencies for cb-server#cb-server$sources_javadoc_2.11;1.0 [provided]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ws.rs#javax.ws.rs-api;2.0.1 [provided->default(compile)]
 [info] Resolving javax.ws.rs#javax.ws.rs-api;2.0.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7941eced
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2033fb46
 [debug] sbt-chain: module revision found in cache: javax.ws.rs#javax.ws.rs-api;2.0.1
 [debug] 	found javax.ws.rs#javax.ws.rs-api;2.0.1 in sbt-chain
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ws.rs#javax.ws.rs-api;2.0.1 [provided->runtime]
@@ -108,12 +108,28 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ws.rs#javax.ws.rs-api;2.0.1 [provided->master]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->default(compile)]
 [info] Resolving javax.websocket#javax.websocket-api;1.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5972ff28
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1ce8023a
 [debug] sbt-chain: module revision found in cache: javax.websocket#javax.websocket-api;1.1
 [debug] 	found javax.websocket#javax.websocket-api;1.1 in sbt-chain
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->runtime]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->compile]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->default(compile)]
+[info] Resolving javax.ejb#javax.ejb-api;3.2 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@43d1726f
+[debug] sbt-chain: module revision found in cache: javax.ejb#javax.ejb-api;3.2
+[debug] 	found javax.ejb#javax.ejb-api;3.2 in sbt-chain
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->default(compile)]
+[info] Resolving javax.transaction#javax.transaction-api;1.2 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3d295b13
+[debug] sbt-chain: module revision found in cache: javax.transaction#javax.transaction-api;1.2
+[debug] 	found javax.transaction#javax.transaction-api;1.2 in sbt-chain
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->master]
 [debug] resolving dependencies for configuration 'optional'
 [debug] == resolving dependencies for cb-server#cb-server$sources_javadoc_2.11;1.0 [optional]
 [debug] resolving dependencies for configuration 'compile-internal'
@@ -137,6 +153,14 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->runtime]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->compile]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->default(compile)]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->default(compile)]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->master]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile-internal->default(compile)]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile-internal->runtime]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile-internal->compile]
@@ -153,6 +177,14 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [compile-internal->runtime]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [compile-internal->compile]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [compile-internal->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [compile-internal->default(compile)]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [compile-internal->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [compile-internal->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [compile-internal->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [compile-internal->default(compile)]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [compile-internal->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [compile-internal->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [compile-internal->master]
 [debug] resolving dependencies for configuration 'runtime-internal'
 [debug] == resolving dependencies for cb-server#cb-server$sources_javadoc_2.11;1.0 [runtime-internal]
 [debug] == resolving dependencies for cb-server#cb-server$sources_javadoc_2.11;1.0 [runtime]
@@ -233,6 +265,14 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->runtime]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->compile]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [provided->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->default(compile)]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [provided->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->default(compile)]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [provided->master]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [test-internal->default(compile)]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [test-internal->runtime]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [test-internal->compile]
@@ -261,6 +301,14 @@
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [test-internal->runtime]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [test-internal->compile]
 [debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.websocket#javax.websocket-api;1.1 [test-internal->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [test-internal->default(compile)]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [test-internal->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [test-internal->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.ejb#javax.ejb-api;3.2 [test-internal->master]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [test-internal->default(compile)]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [test-internal->runtime]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [test-internal->compile]
+[debug] == resolving dependencies cb-server#cb-server$sources_javadoc_2.11;1.0->javax.transaction#javax.transaction-api;1.2 [test-internal->master]
 [debug] resolving dependencies for configuration 'plugin'
 [debug] == resolving dependencies for cb-server#cb-server$sources_javadoc_2.11;1.0 [plugin]
 [debug] resolving dependencies for configuration 'sources'
@@ -339,6 +387,36 @@
 [debug] 	[NOT REQUIRED] javax.websocket#javax.websocket-api;1.1!javax.websocket-api.jar
 [debug] 	[NOT REQUIRED] javax.websocket#javax.websocket-api;1.1!javax.websocket-api.jar(doc)
 [debug] 	[NOT REQUIRED] javax.websocket#javax.websocket-api;1.1!javax.websocket-api.jar(src)
+[debug] 		tried C:\Users\bert\.ivy2\local\javax.ejb\javax.ejb-api\3.2\docs\javax.ejb-api-javadoc.jar
+[debug] 	[NOT REQUIRED] javax.ejb#javax.ejb-api;3.2!javax.ejb-api.jar
+[debug] 		tried C:\Users\bert\.ivy2\local\javax.ejb\javax.ejb-api\3.2\srcs\javax.ejb-api-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-javadoc.jar
+[info] downloading https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-javadoc.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-javadoc.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-javadoc.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-javadoc.jar
+[info] 	[SUCCESSFUL ] javax.ejb#javax.ejb-api;3.2!javax.ejb-api.jar(doc) (514ms)
+[debug] 		tried https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-sources.jar
+[info] downloading https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-sources.jar
+[info] 	[SUCCESSFUL ] javax.ejb#javax.ejb-api;3.2!javax.ejb-api.jar(src) (318ms)
+[debug] 		tried C:\Users\bert\.ivy2\local\javax.transaction\javax.transaction-api\1.2\docs\javax.transaction-api-javadoc.jar
+[debug] 	[NOT REQUIRED] javax.transaction#javax.transaction-api;1.2!javax.transaction-api.jar
+[debug] 		tried C:\Users\bert\.ivy2\local\javax.transaction\javax.transaction-api\1.2\srcs\javax.transaction-api-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-javadoc.jar
+[info] downloading https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-javadoc.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-javadoc.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-javadoc.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-javadoc.jar
+[info] 	[SUCCESSFUL ] javax.transaction#javax.transaction-api;1.2!javax.transaction-api.jar(doc) (337ms)
+[debug] 		tried https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-sources.jar
+[info] downloading https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-sources.jar
+[info] 	[SUCCESSFUL ] javax.transaction#javax.transaction-api;1.2!javax.transaction-api.jar(src) (236ms)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar(doc)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar(src)
@@ -349,7 +427,7 @@
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(doc)
-[debug] :: resolution report :: resolve 191ms :: artifacts dl 34ms
+[debug] :: resolution report :: resolve 285ms :: artifacts dl 1453ms
 [debug] 	report for cb-server#cb-server$sources_javadoc_2.11;1.0 compile produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-server\target\resolution-cache\reports\cb-server-cb-server$sources_javadoc_2.11-compile.xml
 [debug] 	report for cb-server#cb-server$sources_javadoc_2.11;1.0 runtime produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-server\target\resolution-cache\reports\cb-server-cb-server$sources_javadoc_2.11-runtime.xml
 [debug] 	report for cb-server#cb-server$sources_javadoc_2.11;1.0 test produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-server\target\resolution-cache\reports\cb-server-cb-server$sources_javadoc_2.11-test.xml
@@ -363,4 +441,4 @@
 [debug] 	report for cb-server#cb-server$sources_javadoc_2.11;1.0 docs produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-server\target\resolution-cache\reports\cb-server-cb-server$sources_javadoc_2.11-docs.xml
 [debug] 	report for cb-server#cb-server$sources_javadoc_2.11;1.0 pom produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-server\target\resolution-cache\reports\cb-server-cb-server$sources_javadoc_2.11-pom.xml
 [debug] 	report for cb-server#cb-server$sources_javadoc_2.11;1.0 scala-tool produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\cb-server\target\resolution-cache\reports\cb-server-cb-server$sources_javadoc_2.11-scala-tool.xml
-[debug] 	resolve done (191ms resolve - 34ms download)
+[debug] 	resolve done (285ms resolve - 1453ms download)

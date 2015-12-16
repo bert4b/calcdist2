@@ -2163,7 +2163,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2543ms :: artifacts dl 113ms
+[debug] :: resolution report :: resolve 1465ms :: artifacts dl 97ms
 [debug] 	report for default#calcdist-intellij-was-build;0.1-SNAPSHOT compile produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\project\target\resolution-cache\reports\default-calcdist-intellij-was-build-compile.xml
 [debug] 	report for default#calcdist-intellij-was-build;0.1-SNAPSHOT runtime produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\project\target\resolution-cache\reports\default-calcdist-intellij-was-build-runtime.xml
 [debug] 	report for default#calcdist-intellij-was-build;0.1-SNAPSHOT test produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\project\target\resolution-cache\reports\default-calcdist-intellij-was-build-test.xml
@@ -2177,5 +2177,5 @@
 [debug] 	report for default#calcdist-intellij-was-build;0.1-SNAPSHOT docs produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\project\target\resolution-cache\reports\default-calcdist-intellij-was-build-docs.xml
 [debug] 	report for default#calcdist-intellij-was-build;0.1-SNAPSHOT pom produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\project\target\resolution-cache\reports\default-calcdist-intellij-was-build-pom.xml
 [debug] 	report for default#calcdist-intellij-was-build;0.1-SNAPSHOT scala-tool produced in I:\bedrijf\wbso\projects\calcdist-intellij-was\project\target\resolution-cache\reports\default-calcdist-intellij-was-build-scala-tool.xml
-[debug] 	resolve done (2543ms resolve - 113ms download)
+[debug] 	resolve done (1465ms resolve - 97ms download)
 [info] Done updating.
