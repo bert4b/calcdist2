@@ -180,9 +180,39 @@ function setupP2P(simplepeer,data,restful){
             if (result!=null || result!=undefined){
                 sendResponseAfterExecutingJob(jobTask,result);
             }
+        }else{
+            writeToConsoleScreen("We have result");
+
         }
 
 	})
+}
+
+function createJob(){
+    var v=[];
+    var p=[];
+    var parameterValues=[];
+    for (var i=1;i<=4;i++){
+        parameterValues.push({key:document.querySelector("#p"+i).value,value:document.querySelector("#v"+i).value});
+
+    }
+    writeToConsoleScreen(parameterValues);
+
+    var jobs=[];
+
+    var income;
+    parameterValues.forEach(function(f){if (f.key=='income'){income= f.value;}});
+    var hypotheekSchuld=income*4;
+
+    writeToConsoleScreen(income);
+    var id=1;
+
+    var jobProcess = {"nodeid":generateGuid(),"jobid":+ id, "jobExecutable":jobExecutable};
+
+    var jobParameters=parameterValues;
+
+    var jobMapReduceStep = {"nodeid":generateGuid(),"jobid":+ id, "jobs":mjobs,"parameters":jobParameters};
+
 }
 
 function sendResponseAfterExecutingJob(job,result){
@@ -192,11 +222,14 @@ function sendResponseAfterExecutingJob(job,result){
     p2p.send(JSON.stringify(resultResponse));
 }
 
-function fireJob(){
+function fireJob(jobExecutable){
     var id=1;
-    var job=document.querySelector('#job').value;
-    var jobTask = {"nodeid":generateGuid(),"jobid":+ id, "jobExecutable":job};
+    var jobTask = {"nodeid":generateGuid(),"jobid":+ id, "jobExecutable":jobExecutable};
     p2p.send(JSON.stringify(jobTask));
+}
+
+function fireJob(){
+    fireJob(document.querySelector('#job').value);
 }
 function connectionEstablished(){
     document.querySelector("#connection").innerHTML="Connection Established";

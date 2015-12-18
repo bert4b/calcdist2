@@ -13,6 +13,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -32,14 +33,67 @@
 <script src="node_modules/requirejs/require.js"></script>
 <script src="node.js"></script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<h2>Calculation engine</h2>
+<h2>bee4bit's reactive calculationengine</h2>
 <br/>
 v1
 <br/>
 <br/>
-Calculation:<br/>
+
+
+
+<div class="container">
+<div class="table-condensed">
+    <table class="table">
+        <thead>
+        <tr>
+
+            <th>Rubriek</th>
+            <th>Invoer</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>  Jaarinkomen (bruto) <input type="hidden" id="p1" value="income"/></td>
+            <td><input type="text" id="v1" value="40000"/> euro</td>
+
+        </tr>
+        <tr>
+            <td>  Hypotheekvorm (annuiteit/lineair)<input type="hidden" id="p2" value="form"/></td>
+            <td><input type="text" id="v2" value="annuiteit"/></td>
+
+        </tr>
+        <tr>
+            <td>  Looptijd <input type="hidden" id="p3" value="looptijd"/></td>
+            <td><input type="text" id="v3" value="30"/> jaar</td>
+
+        </tr>
+
+        <tr>
+            <td>  Rente <input type="hidden" id="p4" value="rente"/></td>
+            <td><input type="text" id="v4" value="3"/>%</td>
+
+        </tr>
+        <tr>
+            <td> </td>
+            <td><input type="button" onclick="createJob();" value="Maak job"/></td>
+
+        </tr>
+        <tr>
+            <td> </td>
+            <td><input type="button" onclick="fireJob();" value="Bereken"/></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+<h3>Technisch</h3>
 <input type="text" id="job"><br/>
-<input type="button" onclick="fireJob();" value="Fire calculation"/>
+
 
 Send message:<br/>
 <input type="text" id="send"></input><input type="button" onclick="send();" value="Send"/>
