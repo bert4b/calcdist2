@@ -52,7 +52,7 @@ var notifier=DSManagerNotification
             }
             n
         }
-        var theConnectedNode=nodeClusters.get(theNodeCluster).get.reduce(f)
+        val theConnectedNode=nodeClusters.get(theNodeCluster).get.reduce(f)
 
           if (theConnectedNode != null && theConnectedNode!=node){
 

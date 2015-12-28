@@ -19,14 +19,18 @@ class Connect {
   @Path("login/{id}")
   @GET
   @Produces(Array("application/json"))
-  def nodeSubscribe(@PathParam("id") identifier: String): NodeMetaInformationResponse = {
+  def nodeSubscribe(@PathParam("id") identifier: String): String = {
     val nodeInf=dsManager.addNode(new Node(identifier, new NodeMetaInformation()))
 
     val nodeInfo=new NodeMetaInformationResponse()
     nodeInfo.dbVersion=dsManager.getMetaInformation.getDbVersion
     nodeInfo.isInitiator=nodeInf.nodeConnection==null || nodeInf.nodeConnection==""
     nodeInfo.nodeConnection=nodeInf.nodeConnection
-    nodeInfo
+    nodeInfo.nodeSize=dsManager.clusterSize
+
+    val gson=new Gson()
+    gson.toJson(nodeInfo,classOf[NodeMetaInformationResponse])
+
   }
 
   @Path("dsinfo")

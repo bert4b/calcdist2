@@ -11,6 +11,7 @@ var alreadySent=false;
 var ws = new WebSocket("ws://localhost:9080/cb-server/socket.io");
 var receivedSignalObject=null;
 var connectionEstablishedIndicator=false;
+var nodeSizeClient=0;
 var configWebRTC={
 		  initiator: location.hash === '#1',
 		  channelConfig: {},
@@ -48,26 +49,27 @@ function generateGuid(){
 	}
 	return guid;
 }
-function waitForAnswerFromSlave(restful){
+function waitForAnswerFromSlave(restful,nodeIndex){
     var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
     var signalEntity=resource.one('waitforanswer',generateGuid()).get().then(function(response) {
         writeToConsoleScreen("Initiator get answer, respond.");
-        p2p.signal(JSON.parse(response.body().data().answer));
+        writeToConsoleScreen("Node #"+nodeIndex);
+        p2p[nodeIndex].signal(JSON.parse(response.body().data().answer));
     });
 }
-function sendSignalToServer(signalData,restful){
+function sendSignalToServer(signalData,restful,nodeIndex){
 	var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
 	var signalEntity=resource.one('signalmsg',generateGuid()).get().then(function(response) {
 		const dataEntity = response.body();
 		const data=dataEntity.data();
-        writeToConsoleScreen(data);
+        writeToConsoleScreen("Node #"+nodeIndex);
 		data.signal=signalData;
 		dataEntity.save().then(function(response){
 			if (response.statusCode()==200){
 				writeToConsoleScreen("Signal sent: response ok");
 
                 //Wait while client gets signal and answers.
-                waitForAnswerFromSlave(restful);
+                waitForAnswerFromSlave(restful,nodeIndex);
 
 
                 //ws.onopen = function() {
@@ -95,7 +97,7 @@ function sendSignalToServer(signalData,restful){
 
 }
 
-function receiveSignalFromServer(restful){
+function receiveSignalFromServer(restful,nodeIndex){
     var resource = restful('http://localhost:9080/cb-server/rest/connect', fetchBackend(fetch));
     resource.one('receivesignalmsg',generateGuid()).get().then(function(response) {
             const data = response.body().data();
@@ -103,7 +105,7 @@ function receiveSignalFromServer(restful){
             if (response.statusCode()==200){
                 writeToConsoleScreen("Received signal");
                 receivedSignalObject=response.body().data();
-                p2p.signal(data.signal);
+                p2p[nodeIndex].signal(data.signal);
             }
 
     });
@@ -126,66 +128,77 @@ function sendAnswerBackToInitiator(restful,answerdata,dataObject){
     //});
     var signalEntity=resource.one('answersignalmsg',generateGuid());
 
-    dataObject.answer=answerdata
+    dataObject.answer=answerdata;
     signalEntity.put(dataObject).then(function(response) {
         writeToConsoleScreen(response);
         if (response.statusCode()==200) {
-
                  writeToConsoleScreen("Answered signal");
         }
     });
 }
 function setupP2P(simplepeer,data,restful){
     var datObject=data;
-    initiator=datObject.initiator;
-	var p = new simplepeer({ initiator: datObject.initiator, trickle: false,stream:false});
-	p2p=p;
-	p.on('error', function (err) { writeToConsoleScreen('Error: '+ err) });
-    if (datObject.initiator!=true) {
-        //receive signal from server
-        writeToConsoleScreen("I'm slave: Receive signal from server");
-        receiveSignalFromServer(restful);
-    }
-	p.on('signal', function (data) {
-        document.querySelector("#offer").value = JSON.stringify(data);
-        if (initiator==true) {
-            if (alreadySent==false){
-                //send signal to server
-                writeToConsoleScreen("I'm initiator: Send signal to server");
-                sendSignalToServer(JSON.stringify(data), restful);
+    initiator=datObject.isInitiator;
+    var nodeSize=datObject.nodeSize;
+    nodeSizeClient=nodeSize;
+    writeToConsoleScreen("Node size: "+nodeSize);
+    var nodeIndex;
+    for (nodeIndex=0;nodeIndex<(nodeSize-1);nodeIndex++){
+        writeToConsoleScreen("Node #: "+nodeIndex);
+        var p = new simplepeer({ initiator: initiator, trickle: false,stream:false});
+        p.nodeIndex=nodeIndex;
+        p2p[nodeIndex]=p;
+        writeToConsoleScreen(p2p);
+        p.on('error', function (err) { writeToConsoleScreen('Error: '+ err) });
+        if (initiator!=true) {
+            //receive signal from server
+            writeToConsoleScreen("I'm slave: Receive signal from server");
+            receiveSignalFromServer(restful,nodeIndex);
+        }
+        p.on('signal', function (data) {
+
+            document.querySelector("#offer").value = JSON.stringify(data);
+            if (initiator==true) {
+                if (alreadySent==false){
+                    //send signal to server
+                    writeToConsoleScreen("I'm initiator: Send signal to server");
+                    sendSignalToServer(JSON.stringify(data), restful, this.nodeIndex);
+                }else{
+                    //Send not once again signal to server
+                    alreadySent=true;
+                }
+            }
+            else{
+                writeToConsoleScreen("I get answer from initiator.");
+                sendAnswerBackToInitiator(restful,JSON.stringify(data),receivedSignalObject,nodeIndex);
+            }
+        });
+        p.on('connect', function () {
+            writeToConsoleScreen("Connection established!");
+            connectionEstablished(nodeIndex);
+        });
+
+        p.on('data', function (data) {
+            writeToConsoleScreen(data);
+            document.querySelector("#received").innerHTML=document.querySelector("#received").innerHTML+data;
+            var jobTask=data;
+            if (jobTask.nodeid!=generateGuid()){
+                writeToConsoleScreen("Executing");
+                //Execute job
+                var result=eval(jobTask.jobExecutable);
+                //Send result back
+                if (result!=null || result!=undefined){
+                    sendResponseAfterExecutingJob(jobTask,result,nodeIndex);
+                }
             }else{
-                //Send not once again signal to server
-                alreadySent=true;
+                writeToConsoleScreen("We have result");
+
             }
-        }
-        else{
-          writeToConsoleScreen("I get answer from initiator.");
-          sendAnswerBackToInitiator(restful,JSON.stringify(data),receivedSignalObject);
-        }
-	});
-	p.on('connect', function () {
-		writeToConsoleScreen("Connection established!");
-        connectionEstablished();
-	});
 
-	p.on('data', function (data) {
-        writeToConsoleScreen(data);
-		document.querySelector("#received").innerHTML=document.querySelector("#received").innerHTML+data;
-        var jobTask=data;
-        if (jobTask.nodeid!=generateGuid()){
-            writeToConsoleScreen("Executing");
-            //Execute job
-            var result=eval(jobTask.jobExecutable);
-            //Send result back
-            if (result!=null || result!=undefined){
-                sendResponseAfterExecutingJob(jobTask,result);
-            }
-        }else{
-            writeToConsoleScreen("We have result");
+        })
 
-        }
+    }
 
-	})
 }
 
 function createJob(){
@@ -215,11 +228,11 @@ function createJob(){
 
 }
 
-function sendResponseAfterExecutingJob(job,result){
+function sendResponseAfterExecutingJob(job,result,nodeIndex){
 
     var resultResponse = {"nodeid":generateGuid(),"jobid":+ job.jobid, "result":result};
     writeToConsoleScreen("Send result back");
-    p2p.send(JSON.stringify(resultResponse));
+    p2p[nodeIndex].send(JSON.stringify(resultResponse));
 }
 
 function fireJob(jobExecutable){
@@ -231,9 +244,9 @@ function fireJob(jobExecutable){
 function fireJob(){
     fireJob(document.querySelector('#job').value);
 }
-function connectionEstablished(){
+function connectionEstablished(nodeIndex){
     document.querySelector("#connection").innerHTML="Connection Established";
-    connectionEstablishedIndicator=true;
+    connectionEstablishedIndicator[nodeIndex]=true;
 }
 
 function start(){
@@ -250,7 +263,8 @@ function start(){
 			//  const article = response.body().data();
 			//	writeToConsoleScreen(article);
         //});
-    if (!connectionEstablishedIndicator) {
+
+    if (nodeSizeClient==undefined || nodeSizeClient==null || nodeSizeClient==0) {
         resource.one('login', generateGuid()).get().then(function (response) {
 
             writeToConsoleScreen("ClientID: " + generateGuid());

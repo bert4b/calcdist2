@@ -1,7 +1,6 @@
 package com.bee4bit.cd.service
 
-import com.bee4bit.cb.datastoremanager.{NodeInClusterInformation, DataMetaInformation}
-import com.bee4bit.cb.node.NodeMetaInformation
+
 
 /**
   * Created by bert on 17-12-2015.
@@ -13,5 +12,7 @@ class NodeMetaInformationResponse {
   var dbVersion:Int=0
 
   var nodeConnection:String=""
+
+  var nodeSize:Int=2
 
 }
