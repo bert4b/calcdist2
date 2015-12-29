@@ -11,7 +11,7 @@ class NodeMetaInformationResponse {
 
   var dbVersion:Int=0
 
-  var nodeConnection:String=""
+  var nodeConnection:Array[String]=null
 
   var nodeSize:Int=2
 

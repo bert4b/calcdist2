@@ -8,8 +8,7 @@ class ConnectTest extends FunSuite {
   test("Connect nodes") {
 
     val  connect :Connect= new Connect()
-    val dmetainfo=connect.nodeSubscribe()
-    assert(dmetainfo.getDbVersion==0)
+
 
     assert(connect.dsManager.clusters.isEmpty)
 

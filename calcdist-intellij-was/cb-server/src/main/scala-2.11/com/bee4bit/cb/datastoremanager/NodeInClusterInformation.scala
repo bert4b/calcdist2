@@ -5,5 +5,5 @@ package com.bee4bit.cb.datastoremanager
   */
 class NodeInClusterInformation {
 
-  var nodeConnection:String=""
+  var nodeConnection:scala.collection.mutable.ArrayBuffer[String]=new scala.collection.mutable.ArrayBuffer()
 }

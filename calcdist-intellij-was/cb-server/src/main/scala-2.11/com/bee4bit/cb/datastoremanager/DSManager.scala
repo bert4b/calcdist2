@@ -56,12 +56,12 @@ var notifier=DSManagerNotification
 
           if (theConnectedNode != null && theConnectedNode!=node){
 
-            node.nodeConnection=theConnectedNode
-            theConnectedNode.nodeConnection=node
+            node.nodeConnection+=theConnectedNode
+            theConnectedNode.nodeConnection+=node
 
-            nodeInfo.nodeConnection =  node.nodeConnection.id
+            nodeInfo.nodeConnection +=  theConnectedNode.id
           }else{
-            nodeInfo.nodeConnection = ""
+            nodeInfo.nodeConnection = scala.collection.mutable.ArrayBuffer()
           }
       }
 
@@ -88,7 +88,11 @@ var notifier=DSManagerNotification
       val nodesInCluster:Option[collection.mutable.Set[Node]]=nodeClusters.get(cluster)
 
       if (nodesInCluster.isDefined) {
-        nodeComp=nodesInCluster.get.find(_.id != node.id)
+        def c2(s: Node) = s.getNodeSignalInformation.answer==null && s.getNodeSignalInformation.getSignal()!=null
+        val nodeCompOpt=nodesInCluster.get.find(s=>c2(s))
+        if (nodeCompOpt.isDefined){
+          nodeComp=nodeCompOpt
+        }
       }
     }
     nodeComp
