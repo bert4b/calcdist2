@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20151219220442"/>
+		date="20160106164649"/>
 	<dependencies>
 		<module organisation="javax.ejb" name="javax.ejb-api">
 			<revision name="3.2" status="release" pubdate="20130429191111" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ejb-spec.java.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="7">
@@ -15,13 +15,13 @@
 				<metadata-artifact status="no" details="" size="4113" time="0" location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\ivy-3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2.pom"/>
 				<caller organisation="cb-server" name="cb-server$sources_javadoc_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="3.2" rev-constraint-default="3.2" rev-constraint-dynamic="3.2" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="javax.ejb-api" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="484205" time="514" location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\docs\javax.ejb-api-3.2-javadoc.jar">
+					<artifact name="javax.ejb-api" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="484205" time="0" location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\docs\javax.ejb-api-3.2-javadoc.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-javadoc.jar"/>
 					</artifact>
 					<artifact name="javax.ejb-api" type="jar" ext="jar" status="no" details="" size="63961" time="0" location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\jars\javax.ejb-api-3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2.jar"/>
 					</artifact>
-					<artifact name="javax.ejb-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="165826" time="318" location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\srcs\javax.ejb-api-3.2-sources.jar">
+					<artifact name="javax.ejb-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="165826" time="0" location="C:\Users\bert\.ivy2\cache\javax.ejb\javax.ejb-api\srcs\javax.ejb-api-3.2-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/ejb/javax.ejb-api/3.2/javax.ejb-api-3.2-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -33,13 +33,13 @@
 				<metadata-artifact status="no" details="" size="3949" time="0" location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.pom"/>
 				<caller organisation="cb-server" name="cb-server$sources_javadoc_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="javax.transaction-api" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="208059" time="337" location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\docs\javax.transaction-api-1.2-javadoc.jar">
+					<artifact name="javax.transaction-api" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="208059" time="0" location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\docs\javax.transaction-api-1.2-javadoc.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-javadoc.jar"/>
 					</artifact>
 					<artifact name="javax.transaction-api" type="jar" ext="jar" status="no" details="" size="30724" time="0" location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\jars\javax.transaction-api-1.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.jar"/>
 					</artifact>
-					<artifact name="javax.transaction-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="57319" time="236" location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\srcs\javax.transaction-api-1.2-sources.jar">
+					<artifact name="javax.transaction-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="57319" time="0" location="C:\Users\bert\.ivy2\cache\javax.transaction\javax.transaction-api\srcs\javax.transaction-api-1.2-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-sources.jar"/>
 					</artifact>
 				</artifacts>

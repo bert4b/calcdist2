@@ -2,7 +2,7 @@
 
 
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="guiApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,13 +12,15 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="angularjs/angular.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-   <!-- <script src="angularjs/angular.min.js"></script>-->
+
+    <script src="bootstrap/ui-bootstrap-tpls-0.14.3.min.js"></script>
     <script src="base.js"></script>
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -32,6 +34,8 @@
 <script src="js/main.js"></script>
 <script src="node_modules/requirejs/require.js"></script>
 <script src="node.js"></script>
+
+<script src="gui.js"></script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <h2>bee4bit's reactive calculationengine</h2>
 <br/>
@@ -39,6 +43,8 @@ v1
 <br/>
 <br/>
 
+
+<div ng-controller="JobController">
 
 
 <div class="container">
@@ -77,44 +83,99 @@ v1
         </tr>
         <tr>
             <td> </td>
-            <td><input type="button" onclick="createJob();" value="Maak job"/></td>
+            <td>
+
+                <script type="text/ng-template" id="taskTree">
+
+                    <div ng-if="task.parallel" style="display: inline-flex">
+                        <div ng-show="task.process">  {{task.title}}
+
+                            <input type="text" ng-model="task.content" class="form-control">  <div ng-if="$last">
+                                <button ng-click="addTask(task);">+</button>
+                            </div>
+                        </div>
+
+                        <div ng-repeat="task in task.parallel" ng-include="'taskTree'">
+
+                        </div>
+
+                    </div>
+                    <div ng-if="task.vertical" style="display: inherit">
+                        <div ng-show="task.content!=undefined">  {{task.title}}
+
+                            <input type="text" ng-model="task.content" class="form-control">  <div ng-if="$last">
+                                <button ng-click="addTask(task);">+</button>
+                            </div>
+                        </div>
+                        <div ng-repeat="task in task.vertical" ng-include="'taskTree'">
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </script>
+
+                    <div ng-repeat="task in tasks" ng-include="'taskTree'"></div>
+
+
+
+
+
+            </td>
 
         </tr>
         <tr>
             <td> </td>
-            <td><input type="button" onclick="fireJob();" value="Bereken"/></td>
+            <td>
+                <button ng-click="execute(tasks);" ng-disabled="nodeSize==0">Uitvoeren met {{nodeSize}} actors</button><div ng-show="nodeSize<=0" style="color:red">Niet voldoende actors... wacht op nieuwe aanmeldingen.</div></td>
+
+        </tr>
+        <tr>
+            <td>Resultaat </td>
+            <td>{{results | currency:"€":2}}</td>
 
         </tr>
         </tbody>
     </table>
 </div>
 </div>
-
-
-<h3>Technisch</h3>
-<input type="text" id="job"><br/>
-
-
-Send message:<br/>
-<input type="text" id="send"></input><input type="button" onclick="send();" value="Send"/>
-<br/>
-
-<br/>
-Status:
-<br/>
-<div id="connection" style="color:lawngreen">
-
-</div><br/>
-Received data:<br/>
-<div id="received"></div>
-<div id="display">
-
 </div>
 
-Signal:<br/>
-<textarea id="offer" style="width:900px;height:200px"></textarea><br/><input type="button" onclick="offer();" value="Signal"/><br/>
-<br/><br/>
+<div ng-controller="ConnectionController">
+<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toon technische gegevens</button>
+<hr>
+<div uib-collapse="isCollapsed">
 
+
+    <h3>Connection details</h3>
+    <input type="text" id="job"><br/>
+
+
+    Send raw message:<br/>
+    <input type="text" id="send"></input><input type="button" onclick="send();" value="Send"/>
+    <br/>
+
+    <br/>
+    Status:
+    <br/>
+    <div id="connection" style="color:lawngreen">
+
+    </div><br/>
+    Received data:<br/>
+    <div id="received"></div>
+    <div id="display">
+
+    </div>
+
+    Signal:<br/>
+    <textarea id="offer" style="width:900px;height:200px"></textarea><br/><input type="button" onclick="offer();" value="Signal"/><br/>
+    <br/><br/>
+</div>
+</div>
 </body>
 </html>
 

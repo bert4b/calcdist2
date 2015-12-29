@@ -4,7 +4,7 @@
 		module="parent$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151219220438"
+		publication="20160106164642"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

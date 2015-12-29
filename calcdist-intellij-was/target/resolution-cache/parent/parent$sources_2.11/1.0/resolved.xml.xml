@@ -4,7 +4,7 @@
 		module="parent$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151219220440"
+		publication="20160106164643"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

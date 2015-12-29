@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20151219220445"/>
+		date="20160106164651"/>
 	<dependencies>
 		<module organisation="javax.ws.rs" name="javax.ws.rs-api">
 			<revision name="2.0.1" status="release" pubdate="20140807140813" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jax-rs-spec.java.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">

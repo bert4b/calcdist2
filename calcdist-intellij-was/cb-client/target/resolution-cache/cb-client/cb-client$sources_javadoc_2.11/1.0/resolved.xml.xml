@@ -4,7 +4,7 @@
 		module="cb-client$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151219220441"
+		publication="20160106164645"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

@@ -77,7 +77,7 @@ class Connect {
     var nodeSignal=new NodeSignalInformation()
     if (node.isDefined) {
 
-      def c2(s: Node) = {s.getNodeSignalInformation.answer==null && s.getNodeSignalInformation.getSignal()!=null}
+      def c2(s: Node) = {(s.getNodeSignalInformation.answer==null || s.getNodeSignalInformation.answer.isEmpty) && s.getNodeSignalInformation.getSignal()!=null}
       val nodeSignalOption=node.get.nodeConnection.find(x=>c2(x))
       if (nodeSignalOption.isDefined){
         nodeSignal=nodeSignalOption.get.getNodeSignalInformation

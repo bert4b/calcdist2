@@ -12,6 +12,7 @@ var ws = new WebSocket("ws://localhost:9080/cb-server/socket.io");
 var receivedSignalObject=null;
 var connectionEstablishedIndicator=false;
 var nodeSizeClient=0;
+var ff=false;
 var configWebRTC={
 		  initiator: location.hash === '#1',
 		  channelConfig: {},
@@ -28,10 +29,10 @@ function fetchBackend(fetch){
 }
 
 function offer(){
-	 p2p.signal(JSON.parse(document.querySelector('#offer').value))
+    p2p[nodeIndex].signal(JSON.parse(document.querySelector('#offer').value))
 }
 function send(){
-	 p2p.send(document.querySelector('#send').value);
+    p2p[nodeIndex].send(document.querySelector('#send').value);
 }
 
 
@@ -176,6 +177,7 @@ function setupP2P(simplepeer,data,restful){
         p.on('connect', function () {
             writeToConsoleScreen("Connection established!");
             connectionEstablished(nodeIndex);
+
         });
 
         p.on('data', function (data) {
@@ -247,6 +249,11 @@ function fireJob(){
 function connectionEstablished(nodeIndex){
     document.querySelector("#connection").innerHTML="Connection Established";
     connectionEstablishedIndicator[nodeIndex]=true;
+    var appElement = document.querySelector('[ng-app=guiApp]');
+    var $scope = angular.element(appElement).scope();
+    $scope.$apply(function() {
+        $scope.connections=nodeIndex;
+    });
 }
 
 function start(){
